@@ -42,7 +42,7 @@
           <a href="#">Забыли пароль?</a>
           <a href="">Новая регистрация</a>
         </li>
-        <li class="basket">
+        <li class="cart">
           <a href="#">Пусто</a>
         </li>
       </ul>
@@ -80,22 +80,22 @@
       <li class="popular item">
         <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         <b>310 &#8381; /кг</b>
-        <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </li>
       <li class="popular item">
         <img src="img/1.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         <b>380 &#8381; /кг</b>
-        <p>Сливочно-кофейное с кусочками шоколада</p>
+        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
       </li>
       <li class="popular item">
         <img src="img/1.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         <b>355 &#8381; /кг</b>
-        <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
       </li>
       <li class="popular item">
         <img src="img/1.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         <b>415 &#8381; /кг</b>
-        <p>Сливочное крем-брюле с карамельной подливкой</p>
+        <a href="">Сливочное крем-брюле с карамельной подливкой</a>
       </li>
     </ul>
     <section class="about">
@@ -143,23 +143,33 @@
 </main>
 <footer class="index-page-footer">
   <div class="container">
-    <article class="social-block">
-      <a href="www.twitter.com" class="social-btn tw-btn">twitter</a>
-      <a href="www.instagram.com" class="social-btn ig-btn">instagram</a>
-      <a href="www.fb.com" class="social-btn fb-btn">facebook</a>
-      <a href="www.vk.com" class="social-btn vk-btn">vkontakte</a>
-    </article>
-    <article class="about-block">
+    <ul class="social-block">
+      <li><a href="www.twitter.com" class="social-btn tw-btn">twitter</a></li>
+      <li><a href="www.instagram.com" class="social-btn ig-btn">instagram</a></li>
+      <li><a href="www.fb.com" class="social-btn fb-btn">facebook</a></li>
+      <li><a href="www.vk.com" class="social-btn vk-btn">vkontakte</a></li>
+    </ul>
+    <div class="about-block">
       <a href="#">Для поставщиков</a>
       <a href="#">О производстве</a>
       <a href="#">Наши документы</a>
       <a href="#">Экологические стандарты</a>
-    </article>
-    <article class="dev-block">
+    </div>
+    <div class="dev-block">
       <img src="img/logo-htmlacademy-small.svg" alt="HTML Academy" width="108" height="39">
       <p>Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&copy; 2017</p>
-    </article>
+    </div>
   </div>
 </footer>
+<section class="modal modal-feedback">
+  <h3>Мы обязательно вам ответим!</h3>
+  <span class="modal-close">x</span>
+  <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+    <input type="text" name="feedback-name" placeholder="Как вас зовут?">
+    <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+    <textarea name="feedback-text" rows="5" cols="100" placeholder="Напишите что-нибудь..."></textarea>
+    <button class="btn btn-feedback-send" type="submit">Отправить</button>
+  </form>
+</section>
 </body>
 </html>

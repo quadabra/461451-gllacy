@@ -42,11 +42,31 @@
           <a href="#">Забыли пароль?</a>
           <a href="">Новая регистрация</a>
         </li>
-        <li class="basket">
+        <li class="cart">
           <a href="#">2 товара</a>
-          <form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
-            <button class="btn btn-order"></button>
-          </form>
+          <article class="cart-form">
+            <button class="btn btn-order" type="button">Оформить заказ</button>
+            <table class="cart-list">
+              <tr>
+                <td><a class="modal-remove" href="#">x</a></td>
+                <td><a href="#"><img src="img/icecream1_small_33x33.png" alt="Пломбир"></a></td>
+                <td><a href="#">Пломбир с апельсиновым джемом</a></td>
+                <td>1,5 кг</td>
+                <td>x 200 руб.</td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><a class="modal-remove" href="#">x</a></td>
+                <td><a href="#"><img src="img/icecream1_small_33x33.png" alt="Клубничный пломбир"></a></td>
+                <td><a href="#">Клубничный пломбир с присыпкой
+                  из белого шоколада</a></td>
+                <td>1,5 кг</td>
+                <td>x 300 руб.</td>
+                <td>450 руб.</td>
+              </tr>
+            </table>
+            <b class="cart-sum">Итого: 750 руб.</b>
+          </article>
         </li>
       </ul>
     </nav>
@@ -77,7 +97,7 @@
         <legend>Жирность:</legend>
         <ul>
           <li><input type="radio" name="fat-content" id="fat0" value="fat0">0%</li>
-          <li><input type="radio" name="fat-content" id="fat10" value="fat10">до 10%</li>
+          <li><input type="radio" name="fat-content" id="fat10" value="fat10" checked>до 10%</li>
           <li><input type="radio" name="fat-content" id="fat30" value="fat30">до 30%</li>
           <li><input type="radio" name="fat-content" id="fat100" value="fat100">свыше 30%</li>
         </ul>
@@ -102,62 +122,62 @@
       <li class="item">
         <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         <b>310 &#8381; /кг</b>
-        <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         <b>380 &#8381; /кг</b>
-        <p>Сливочно-кофейное с кусочками шоколада</p>
+        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         <b>355 &#8381; /кг</b>
-        <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         <b>415 &#8381; /кг</b>
-        <p>Сливочное крем-брюле с карамельной подливкой</p>
+        <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочное с брусничным джемом" width="267" height="267">
         <b>325 &#8381; /кг</b>
-        <p>Сливочное с брусничным джемом</p>
+        <a href="#">Сливочное с брусничным джемом</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
         <b>410 &#8381; /кг</b>
-        <p>Сливочно-черничное с цельными ягодами черники</p>
+        <a href="#">Сливочно-черничное с цельными ягодами черники</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
         <b>375 &#8381; /кг</b>
-        <p>Сливочно-лимонное с карамельной присыпкой</p>
+        <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
         <b>320 &#8381; /кг</b>
-        <p>Сливочное с шоколадной стружкой</p>
+        <a href="#">Сливочное с шоколадной стружкой</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
         <b>440 &#8381; /кг</b>
-        <p>Сливочно-ванильное с кусочками шоколада</p>
+        <a href="#">Сливочно-ванильное с кусочками шоколада</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
         <b>435 &#8381; /кг</b>
-        <p>Сливочноe с ментоловым сиропом</p>
+        <a href="#">Сливочноe с ментоловым сиропом</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
         <b>355 &#8381; /кг</b>
-        <p>Сливочное с кусочками черного шоколада</p>
+        <a href="#">Сливочное с кусочками черного шоколада</a>
       </li>
       <li class="item">
         <img src="img/1.png" alt="Сливочное с мятным сиропом" width="267" height="267">
         <b>420 &#8381; /кг</b>
-        <p>Сливочное с мятным сиропом</p>
+        <a href="#">Сливочное с мятным сиропом</a>
       </li>
     </ul>
     <ul class="paginator">
@@ -173,22 +193,22 @@
 </main>
 <footer class="index-page-footer">
   <div class="container">
-    <article class="social-block">
-      <a href="www.twitter.com" class="social-btn tw-btn">twitter</a>
-      <a href="www.instagram.com" class="social-btn ig-btn">instagram</a>
-      <a href="www.fb.com" class="social-btn fb-btn">facebook</a>
-      <a href="www.vk.com" class="social-btn vk-btn">vkontakte</a>
-    </article>
-    <article class="about-block">
+    <ul class="social-block">
+      <li><a href="www.twitter.com" class="social-btn tw-btn">twitter</a></li>
+      <li><a href="www.instagram.com" class="social-btn ig-btn">instagram</a></li>
+      <li><a href="www.fb.com" class="social-btn fb-btn">facebook</a></li>
+      <li><a href="www.vk.com" class="social-btn vk-btn">vkontakte</a></li>
+    </ul>
+    <div class="about-block">
       <a href="#">Для поставщиков</a>
       <a href="#">О производстве</a>
       <a href="#">Наши документы</a>
       <a href="#">Экологические стандарты</a>
-    </article>
-    <article class="dev-block">
+    </div>
+    <div class="dev-block">
       <img src="img/logo-htmlacademy-small.svg" alt="HTML Academy" width="108" height="39">
       <p>Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&copy; 2017</p>
-    </article>
+    </div>
   </div>
 </footer>
 </body>
