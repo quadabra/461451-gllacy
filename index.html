@@ -13,9 +13,9 @@
       <a class="header-logo">
         <img src="img/Logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
       </a>
-      <ul class="site-nav">
+      <ul class="site-nav navigation">
         <li><a href="#">Каталог</a>
-          <ul class="submenu hidden">
+          <ul class="submenu catalog-menu hidden">
             <li><b>Новинки</b></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -26,21 +26,23 @@
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О компании</a></li>
       </ul>
-      <ul class="user-nav">
+      <ul class="user-nav navigation">
         <li class="search"><a href="#">Поиск</a>
-          <form class="search-form hidden" action="https://echo.htmlacademy.ru" method="get">
+          <form class="search-form submenu hidden" action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="localsearch" name="Поиск" placeholder="Что ищем?">
             <input class="hidden" type="submit">
           </form>
         </li>
         <li class="login"><a href="#">Вход</a>
-          <form class="login-form hidden" action="https://echo.htmlacademy.ru" method="post">
+          <div class="login-form submenu hidden">
+          <form class="login-window" action="https://echo.htmlacademy.ru" method="post">
             <input type="email" name="email-login" placeholder="Электронная почта">
             <input type="password" name="password" placeholder="Пароль">
             <button class="btn btn-login"></button>
           </form>
           <a href="#">Забыли пароль?</a>
           <a href="">Новая регистрация</a>
+          </div>
         </li>
         <li class="cart">
           <a href="#">Пусто</a>
@@ -76,24 +78,24 @@
         <a href="#" class="btn btn-order">Хочу шоколадки!</a>
       </article>
     </section>
-    <ul class="item-list-line">
+    <ul class="item-list">
       <li class="popular item">
-        <img src="img/1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
+        <img src="img/1st_line_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
         <b>310 &#8381; /кг</b>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </li>
       <li class="popular item">
-        <img src="img/1.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+        <img src="img/1st_line_2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
         <b>380 &#8381; /кг</b>
         <a href="#">Сливочно-кофейное с кусочками шоколада</a>
       </li>
       <li class="popular item">
-        <img src="img/1.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+        <img src="img/1st_line_3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
         <b>355 &#8381; /кг</b>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
       </li>
       <li class="popular item">
-        <img src="img/1.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+        <img src="img/1st_line_4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
         <b>415 &#8381; /кг</b>
         <a href="">Сливочное крем-брюле с карамельной подливкой</a>
       </li>
@@ -125,7 +127,7 @@
         </form>
       </article>
     </section>
-  </div>
+
   <section class="map-block">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5893872204867!2d30.326183932567027!3d59.93895541169932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1502638192555"
@@ -140,6 +142,7 @@
       <button class="btn btn-feedback-form">Форма обратной связи</button>
     </div>
   </section>
+  </div>
 </main>
 <footer class="index-page-footer">
   <div class="container">

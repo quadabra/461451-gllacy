@@ -1,1 +1,142 @@
-/* Всё мыши съели */
+body {
+  font-family: Roboto, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  min-width: 900px;
+  background-color: #849d8f;
+}
+.hidden{
+  display: none;
+}
+.top-menu-nav {
+  margin: 0 2.3%;
+  display: flex;
+}
+.header-logo img {
+  margin-top: 9px;
+}
+.site-nav {
+  padding: 0;
+  list-style: none;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 33px;
+  vertical-align: top;
+  position: relative;
+}
+.site-nav > li {
+  margin-right: 36px;
+  height: 32px;
+  line-height: 32px;
+}
+.navigation > li {
+  display: inline-block;
+}
+.catalog-menu {
+  list-style: none;
+  position: absolute;
+  bottom: -150px;
+  left: -50px;
+}
+.user-nav {
+  padding: 0;
+  list-style: none;
+  border: 1px solid black;
+  margin-top: 32px;
+  margin-left: auto;
+  float: right;
+  vertical-align: top;
+}
+.navigation > li:hover .submenu {
+  display: block;
+}
+.additions-title,
+.additions-text {
+  color: white;
+  margin-right: 28px;
+  margin-left: 20px;
+
+}
+.additions-title {
+  font-size: 35px;
+  margin-top: 23px;
+  margin-bottom: 20px;
+}
+.additions-text {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.additions {
+  margin: 0 auto 40px;
+  padding: 0;
+  width: 95.4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 239px;
+  grid-column-gap: 2.2%;
+}
+.rapsberry {
+  background-image: url("../img/background_berry.jpg");
+  border-radius: 20px;
+}
+.chocolate {
+  background-image: url("../img/background_choco.jpg");
+  border-radius: 20px;
+}
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+.item a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+.item-list {
+  margin: 0 auto;
+  padding: 0;
+  width: 95.4%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2.2%;
+  grid-row-gap: 37px;
+}
+.item {
+  border: 1px solid black;
+  list-style: none;
+  position: relative;
+}
+.popular {
+  position: relative;
+}
+.popular::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/hit.png");
+
+}
+.item b {
+  position: absolute;
+  font-size: 45px;
+  line-height: 45px;
+  color: white;
+  bottom: 25%;
+  left: 0;
+  text-shadow: 1px 1px 1px black;
+}
+
