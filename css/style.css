@@ -3,10 +3,6 @@ body {
 }
 a {
   text-decoration: none;
-
-
-
-
 }
 
 .container {
@@ -30,40 +26,31 @@ a {
 .header-logo img {
   margin-top: 9px;
 }
-.top-menu-nav {
-
-}
-.top-user-nav {
-  margin-left: auto;
-}
 .site-nav {
   padding: 0;
   margin-left: 33px;
   list-style: none;
   margin-top: 20px;
   vertical-align: top;
-  position: relative;
 }
 .site-nav > li {
-
+  position: relative;
 }
 .navigation > li {
   display: inline-block;
   text-align: center;
-  height: 32px;
+  height: 33px;
   line-height: 32px;
 }
 .submenu {
-  
   position: absolute;
   top: 32px;
+  padding-top: 5px;
+}
+.catalog-submenu {
   left: -7px;
   min-width: 145px;
   min-height: 176px;
-  padding-top: 5px;
-
-
-
 }
 .catalog-menu {
   list-style: none;
@@ -71,9 +58,8 @@ a {
   text-align: left;
   font-size: 14px;
   padding: 0;
-
   border-radius: 5px;
-  box-shadow: 0 14px 14px #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   background-color: #ffffff;
 }
 .catalog-menu > li {
@@ -100,7 +86,6 @@ a {
 .catalog-menu > li:hover:not(:first-child) {
   background-color: rgb(251, 222, 216);
 }
-
 .catalog-menu a {
   color: #323232;
   line-height: 28px;
@@ -110,7 +95,6 @@ a {
   margin-left: 21px;
   line-height: 38px;
   font-size: 14px;
-
 }
 .navigation > li:hover .submenu {
   display: block;
@@ -137,17 +121,48 @@ a {
   color: #000000;
   font-weight: bold;
 }
-
+.top-user-nav {
+  margin-left: auto;
+}
 .user-nav {
   padding: 0;
   list-style: none;
   border: 1px solid black;
-  margin-top: 32px;
-  margin-left: auto;
-  float: right;
+  margin-top: 20px;
   vertical-align: top;
 }
+.user-nav > li {
+  position: relative;
+  margin-left: 10px;
+}
+.search {
+  margin: 0;
+  padding: 0;
+  width: 32px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
 
+  vertical-align: middle;
+}
+.search > a {
+  font-size: 0;
+  display: block;
+  margin: 8px auto;
+}
+.search:hover svg #search {
+  fill: #111;
+}
+.search:hover {
+  background-color: rgba(255, 255, 255, 1)
+}
+.login {
+
+}
+
+.submenu-search {
+  right: 0;
+  min-width: ;
+}
 .contact-us {
   position: absolute;
   display: block;
