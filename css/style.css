@@ -41,6 +41,16 @@ a {
   text-align: center;
   height: 33px;
   line-height: 32px;
+  border-radius: 16px;
+}
+.navigation >li > a {
+  color: #ffffff;
+}
+.navigation >li:hover {
+  background-color: #ffffff;
+}
+.navigation > li:hover a {
+  color: #000000;
 }
 .submenu {
   position: absolute;
@@ -111,14 +121,6 @@ a {
 
 .site-nav > li > a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-.site-nav > li:hover {
-  border-radius: 16px;
-  background-color: #ffffff;
-}
-.site-nav > li:hover > a {
-  color: #000000;
   font-weight: bold;
 }
 .top-user-nav {
@@ -127,42 +129,66 @@ a {
 .user-nav {
   padding: 0;
   list-style: none;
-  border: 1px solid black;
   margin-top: 20px;
   vertical-align: top;
 }
 .user-nav > li {
   position: relative;
-  margin-left: 10px;
-}
-.search {
   margin: 0;
   padding: 0;
-  width: 32px;
-  border-radius: 16px;
+  margin-left: 10px;
   background-color: rgba(255, 255, 255, 0.2);
-
   vertical-align: middle;
+}
+.search {
+  width: 32px;
+}
+.login {
+  width: 92px;
+}
+.cart {
+  width: 117px;
 }
 .search > a {
   font-size: 0;
-  display: block;
-  margin: 8px auto;
 }
-.search:hover svg #search {
+svg {
+  position: relative;
+  display: inline-block;
+  top: 4px;
+}
+.search:hover svg #search,
+.login:hover svg #enter,
+.cart:hover svg #cart{
   fill: #111;
 }
-.search:hover {
-  background-color: rgba(255, 255, 255, 1)
-}
-.login {
-
-}
-
 .submenu-search {
+  padding-top: 5px;
   right: 0;
-  min-width: ;
+  min-width: 342px;
+  height: 90px;
 }
+.search-form {
+  margin: 0;
+  min-width: inherit;
+  min-height: 85px;
+  background-color: rgb(248, 247, 244);
+  border-radius: 5px;
+}
+input[type=search] {
+  margin: 21px auto;
+  height: 42px;
+  width: 310px;
+  vertical-align: middle;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  border: 1px solid rgb(211, 211, 210);
+}
+
+
+
+
 .contact-us {
   position: absolute;
   display: block;
