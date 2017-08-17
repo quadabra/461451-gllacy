@@ -3,7 +3,10 @@ body {
 }
 a {
   text-decoration: none;
-  color: white;
+
+
+
+
 }
 
 .container {
@@ -12,40 +15,109 @@ a {
   max-width: 1200px;
   min-width: 900px;
   background-color: #849d8f;
+
 }
 .hidden{
   display: none;
 }
-.top-menu-nav {
+.page-header {
   margin: 0 2.3%;
+  min-width: inherit;
   display: flex;
+  position: relative;
 }
+
 .header-logo img {
   margin-top: 9px;
 }
+.top-menu-nav {
+
+}
+.top-user-nav {
+  margin-left: auto;
+}
 .site-nav {
   padding: 0;
-  list-style: none;
-  border: 1px solid black;
-  margin-top: 20px;
   margin-left: 33px;
+  list-style: none;
+  margin-top: 20px;
   vertical-align: top;
   position: relative;
 }
 .site-nav > li {
-  margin-right: 36px;
-  height: 32px;
-  line-height: 32px;
+
 }
 .navigation > li {
   display: inline-block;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
 }
 .catalog-menu {
   list-style: none;
   position: absolute;
-  bottom: -150px;
-  left: -50px;
+  top: 38px;
+  left: -7px;
+  width: 145px;
+  height: 171px;
+  background-color: #ffffff;
+  text-align: left;
+  font-size: 14px;
+  padding: 0;
+  border-radius: 5px;
+  box-shadow: 0 14px 14px #323232;
 }
+.catalog-menu > li {
+  height: 32px;
+  width: inherit;
+  text-align: left;
+  line-height: 32px;
+}
+.catalog-menu li:first-child {
+  border-bottom: 1px solid #323232;
+  line-height: 38px;
+  height: 38px;
+}
+.catalog-menu > li:hover:not(:first-child) {
+  background-color: rgb(251, 222, 216);
+}
+.catalog-menu a {
+  color: #323232;
+  line-height: 28px;
+  margin-left: 21px;
+}
+.catalog-menu b {
+  margin-left: 21px;
+  line-height: 38px;
+  font-size: 14px;
+
+}
+.navigation > li:hover .submenu {
+  display: block;
+
+}
+.catalog {
+  width: 87px;
+}
+.delivery {
+  width: 167px;
+}
+.about {
+  width: 118px;
+}
+.site-nav > li > a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+.site-nav > li:hover {
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+.site-nav > li:hover > a {
+  color: #000000;
+  font-weight: bold;
+}
+
 .user-nav {
   padding: 0;
   list-style: none;
@@ -55,8 +127,24 @@ a {
   float: right;
   vertical-align: top;
 }
-.navigation > li:hover .submenu {
+
+.contact-us {
+  position: absolute;
   display: block;
+  right: 0;
+  top: 75px;
+  width: 170px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+}
+.contact-us a {
+  padding: 0;
+  display: block;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
 }
 .additions-title,
 .additions-text {
@@ -99,7 +187,6 @@ a {
 .item a {
   display: block;
   text-align: center;
-  text-decoration: none;
   color: #ffffff;
 
 }
