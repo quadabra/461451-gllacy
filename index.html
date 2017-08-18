@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-  <header class="page-header">
+  <header class="page-header main-page-header">
     <a class="header-logo">
       <img src="img/Logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
     </a>
@@ -29,7 +29,7 @@
         <li class="about"><a href="#">О компании</a></li>
       </ul>
     </nav>
-    <div class="top-user-nav">
+    <nav class="top-user-nav">
       <ul class="user-nav navigation">
         <li class="search"><a href="#">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -40,7 +40,8 @@
           <div class="submenu submenu-search hidden">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
               <input type="search" name="localsearch" name="Поиск" placeholder="Что ищем?">
-              <input class="hidden" type="submit">
+              <input class="visually-hidden" type="submit" id="search-start">
+              <label class="visually-hidden" for="search-start">Искать</label>
             </form>
           </div>
         </li>
@@ -56,7 +57,7 @@
             <form class="login-window" action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email-login" placeholder="Электронная почта">
               <input type="password" name="password" placeholder="Пароль">
-              <button class="btn btn-login" type="submit"></button>
+              <button class="btn btn-login" type="submit">Войти</button>
             </form>
             <a href="#">Забыли пароль?</a>
             <a href="">Новая регистрация</a>
@@ -75,7 +76,7 @@
             Пусто</a>
         </li>
       </ul>
-    </div>
+    </nav>
     <span class="contact-us">C 10 до 20, ежедневно
       <a class="phone-number" href="tel:+78124502525">8 812 450-25-25</a>
     </span>
@@ -95,20 +96,20 @@
 
   <main class="index-page-main">
 
-    <section class="additions">
-      <article class="rapsberry">
-        <h2 class="additions-title">Малинка даром!</h2>
-        <p class="additions-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
+    <article class="promo-block">
+      <section class="promo-element element-rapsberry">
+        <h2 class="promo-element-text element-title">Малинка даром!</h2>
+        <p class="promo-element-text element-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
           варенья бесплатно.</p>
         <a href="#" class="btn btn-order">Хочу варенье!</a>
-      </article>
-      <article class="chocolate">
-        <h2 class="additions-title">Шоколадки даром!</h2>
-        <p class="additions-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки
+      </section>
+      <section class="promo-element element-chocolate">
+        <h2 class="promo-element-text element-title">Шоколадки даром!</h2>
+        <p class="promo-element-text element-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки
           совершенно бесплатно.</p>
         <a href="#" class="btn btn-order">Хочу шоколадки!</a>
-      </article>
-    </section>
+      </section>
+    </article>
     <ul class="item-list">
       <li class="popular item">
         <img src="img/1st_line_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
@@ -151,7 +152,7 @@
         <a href="#" class="blog-text">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <article class="subscribe-block">
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
+        <p class="subscribe-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
           Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <input type="email" name="email-subscribe" placeholder="Электронная почта">
@@ -171,7 +172,7 @@
         <p>Для заказов по телефону:</p>
         <a class="phone-number" href="tel:+78124502525">8 812 450-25-25</a>
         <p>(с 10 до 20 ежедневно)</p>
-        <button class="btn btn-feedback-form">Форма обратной связи</button>
+        <button class="btn btn-feedback">Форма обратной связи</button>
       </div>
     </section>
 
@@ -190,19 +191,19 @@
       <a href="#">Наши документы</a>
       <a href="#">Экологические стандарты</a>
     </div>
-    <div class="dev-block">
-      <img src="img/logo-htmlacademy-small.svg" alt="HTML Academy" width="108" height="39">
+    <address class="copyright-block">
+      <img src="img/logo-htmlacademy-small.svg" alt="логотип HTML Academy" width="108" height="39">
       <p>Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&copy; 2017</p>
-    </div>
+    </address>
 
   </footer>
 </div>
 <section class="modal modal-feedback">
   <h3>Мы обязательно вам ответим!</h3>
-  <span class="modal-close">x</span>
+  <button class="modal-close" type="button">Закрыть</button>
   <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-    <input type="text" name="feedback-name" placeholder="Как вас зовут?">
-    <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+    <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
+    <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
     <textarea name="feedback-text" rows="5" cols="100" placeholder="Напишите что-нибудь..."></textarea>
     <button class="btn btn-feedback-send" type="submit">Отправить</button>
   </form>
