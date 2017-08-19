@@ -1,9 +1,27 @@
 body {
   font-family: Roboto, sans-serif;
 }
-a {
-  text-decoration: none; /* времянка */
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+  min-width: 900px;
+  background-color: #849d8f;
 }
+.disabled{
+  display: none;
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/*
 .promo-element-text {
   color: white;
   margin-right: 28px;
@@ -39,27 +57,8 @@ a {
   line-height: 22px;
   color: #5a5a5a;
 }
-.container {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1200px;
-  min-width: 900px;
-  background-color: #849d8f;
 
-}
-.hidden{
-  display: none;
-}
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
+
 .page-header {
   margin: 0 2.3%;
   min-width: inherit;
@@ -342,3 +341,4 @@ input[type=search] {
   text-shadow: 1px 1px 1px black;
 }
 
+*/
