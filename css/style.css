@@ -63,15 +63,15 @@ a {
   font-size: 14px;
 
 }
-.site-navigation__item a:hover,
-.site-navigation__item a:focus,
-.user-navigation__item a:hover,
-.user-navigation__item a:focus {
+.site-navigation__item > a:hover,
+.site-navigation__item > a:focus,
+.user-navigation__item > a:hover,
+.user-navigation__item > a:focus {
   background-color: #fff;
   color: #000;
 }
-.catalog-opener a:hover ~ .site-navigation__submenu-catalog,
-.catalog-opener a:focus ~ .site-navigation__submenu-catalog {
+.catalog-opener:hover .site-navigation__submenu-catalog,
+.catalog-opener_link:focus ~ .site-navigation__submenu-catalog {
   display: block;
 }
 .site-navigation__submenu-catalog {
