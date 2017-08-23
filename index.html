@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/normalize.css">
+<!--  <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <title>HTML Academy: Глейси</title>
@@ -28,14 +28,14 @@
         <li class="site-navigation__item"><a href="#">О компании</a></li>
       </ul>
       <ul class="user-navigation">
-        <li  class="user-navigation__item"><a class=" no-text user-navigation__item_search" href="#">
+        <li  class="user-navigation__item search-opener"><a class="search-opener_link" href="#">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
             <path id="search" fill="#fff"
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
           </svg>
-          Поиск</a>
+          <span class="no-text">Поиск</span></a>
 
-          <form class="element-hidden" action="https://echo.htmlacademy.ru" method="get">
+          <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="localsearch" placeholder="Что ищем?" id="search-form">
             <label class="visually-hidden" for="search-form">Введите поисковый запрос</label>
             <input class="visually-hidden" type="submit" id="search-start">
@@ -52,7 +52,7 @@
           </svg>
           Вход</a>
           <div class="login-form-container element-hidden">
-            <form class="element-hidden" action="https://echo.htmlacademy.ru" method="post">
+            <form class="user-navigation__login-form" action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
               <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
               <input type="password" name="password" placeholder="Пароль" id="password-field">
@@ -79,17 +79,17 @@
     </nav>
   </header>
 
-  <main class="index-page-main">
+  <main class="page-main">
 
     <p class="contact-us">C 10 до 20, ежедневно
       <a class="phone-number" href="tel:+78124502525">8 812 450-25-25</a>
     </p>
 
     <ul class="slider">
-      <li class="slider-button"><input class="slider__button_first" type="radio" name="slider" id="first-slide" checked>
+      <li><input class="slider__button_first slider-button" type="radio" name="slider" id="first-slide" checked>
       </li>
-      <li class="slider__button_second slider-button"><input type="radio" name="slider" id="second-slide"></li>
-      <li class="slider_button_third slider-button"><input type="radio" name="slider" id="third-slide"></li>
+      <li><input class="slider__button_second slider-button" type="radio" name="slider" id="second-slide"></li>
+      <li><input class="slider_button_third slider-button" type="radio" name="slider" id="third-slide"></li>
     </ul>
     <span class="slider-text slider-first">Крем-брюле и пломбир с малиновым джемом</span>
     <span class="slider-text slider-second"></span>
@@ -99,15 +99,15 @@
     <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
     <article class="promo-block">
       <h2 class="visually-hidden">Специальное предложение</h2>
-      <section class="special-offer">  <!-- какой из вариантов классов оставлять? -->
-        <h3 class="section-title">Малинка даром!</h3>
-        <p class="section-text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
+      <section class="promo-element element-berry">  <!-- какой из вариантов классов оставлять? -->
+        <h3 class="promo-element_title">Малинка даром!</h3>
+        <p class="promo-element_text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
           варенья бесплатно.</p>
         <a href="#" class="btn btn-order">Хочу варенье!</a>
       </section>
       <section class="promo-element element-chocolate">
-        <h3 class="promo-element-text element-title">Шоколадки даром!</h3>
-        <p class="promo-element-text element-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+        <h3 class="promo-element_title">Шоколадки даром!</h3>
+        <p class="promo-element_text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
           шоколадной присыпки
           совершенно бесплатно.</p>
         <a href="#" class="btn btn-order">Хочу шоколадки!</a>
