@@ -39,58 +39,65 @@ a {
 .user-navigation {
   margin-left: auto;
 }
-.site-navigation > li,
-.user-navigation > li {
-  position: relative;
+.site-navigation li,
+.user-navigation li {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 .site-navigation__item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.site-navigation__item a {
   display: block;
   margin: 0;
   padding: 7px 16px;
   font-size: 16px;
-  line-height: 18px;
   font-weight: bold;
   border-radius: 16px;
 }
-.user-navigation__item {
+.user-navigation__item a {
   display: block;
-  margin: 0;
-  padding: 2px 16px;
   font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
-  border-radius: 16px;
+
 }
-.no-text {
-  font-size: 0;
-}
-.site-navigation__item:hover,
-.site-navigation__item:focus,
-.user-navigation__item:hover,
-.user-navigation__item:focus {
+.site-navigation__item a:hover,
+.site-navigation__item a:focus,
+.user-navigation__item a:hover,
+.user-navigation__item a:focus {
   background-color: #fff;
   color: #000;
 }
-svg {
-  vertical-align: middle;
+.catalog-opener a:hover ~ .site-navigation__submenu-catalog,
+.catalog-opener a:focus ~ .site-navigation__submenu-catalog {
+  display: block;
+}
+.site-navigation__submenu-catalog {
+  position: absolute;
   margin: 0;
   padding: 0;
 }
-.user-navigation__item:hover svg #search,
-.user-navigation__item:hover svg #enter,
-.user-navigation__item:hover svg #cart {
-  fill: #111;
+.submenu-catalog_item a {
+  color: #323232;
+  font-size: 14px;
 }
-.site-navigation__submenu_catalog {
-  position: absolute;
-  top: 32px;
-  left: 0;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-}
-.catalog-opener:hover .site-navigation__submenu_catalog,
-.catalog-opener:focus .site-navigation__submenu_catalog {
-  display: block;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
