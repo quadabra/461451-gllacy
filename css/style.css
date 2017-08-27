@@ -77,11 +77,11 @@ a {
   box-shadow: inset 0 2px 1px #696969;
   background-color: #eeeeee;
 }
-.catalog-opener:hover .site-navigation__submenu-catalog,
-.catalog-opener_link:focus ~ .site-navigation__submenu-catalog {
+.catalog-opener:hover .site-navigation__submenu,
+.catalog-opener_link:focus ~ .site-navigation__submenu {
   display: block;
 }
-.site-navigation__submenu-catalog {
+.site-navigation__submenu {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -92,22 +92,22 @@ a {
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
-.site-navigation__submenu-catalog::before {
+.site-navigation__submenu::before {
   content: "";
   width: 143px;
   height: 5px;
   position: absolute;
   top: -5px;
   }
-.submenu-catalog_item {
+.site-navigation__submenu-item {
   margin: 0;
   padding: 0;
 }
-.submenu-catalog_item:first-child {
+.site-navigation__submenu-item:first-child {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.submenu-catalog_item a {
+.site-navigation__submenu-item a {
   display: block;
   margin-left: 6px;
   margin-right: 8px;
@@ -118,16 +118,16 @@ a {
   line-height: 32px;
   min-width: 114px;
 }
-.submenu-catalog_item:first-child a {
+.site-navigation__submenu-item:first-child a {
   font-weight: bold;
   line-height: 38px;
   border-bottom: 1px solid #d2d1cf;
 }
-.submenu-catalog_item:hover,
-.submenu-catalog_item:focus {
+.site-navigation__submenu-item:hover,
+.sitte-navigation__submenu-item:focus {
   background-color: #fbded8;
 }
-.submenu-catalog_item:active {
+.site-navigation__submenu-item:active {
   background-color: #f6b5a5;
 }
 .user-navigation__item {
@@ -404,18 +404,17 @@ min-height: 220px;
   display: block;
   width: 32px;
   height: 32px;
-  opacity: 0.8;
+  fill: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.5);
 }
 .social-block__button:hover,
 .social-block__button:focus {
-  opacity: 1;
+  fill: #fff;
   border: 3px solid rgba(255, 255, 255, 0.7);
 }
 .social-block__button:active {
-  opacity: 1;
-
+  fill: #e9e9e9;
   border: 3px solid #e9e9e9;
 }
 .about-block {
@@ -441,6 +440,12 @@ min-height: 220px;
   line-height: 18px;
   color: #fff;
   font-style: normal;
+}
+
+/******************************* Вторая страница ***********************/
+.catalog-page__header {
+  background-image: url("../img/catalog_background.png");
+  background-repeat: repeat-x;
 }
 /******************************* КНОПКИ ***************************/
 .slider-block__special-offer_button {
@@ -480,8 +485,8 @@ min-height: 220px;
   text-align: center;
   padding-top: 8px;
   border-radius: 23px;
-  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  background-image: linear-gradient(to top, #ca3824 0%, #f26843 100%);
+  box-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
 }
 .button-medium:hover,
 .button-medium:focus {
@@ -502,6 +507,7 @@ min-height: 220px;
   width: 129px;
   color: #fff;
   padding-top: 0;
+  border: none;
 }
 .address-block__button {
   width: 252px;
