@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Глейси</title>
 </head>
-<body>
+<body class="catalog-page">
 <header class="page-header catalog-page__header">
   <div class="wrapper">
     <nav class="top-menu-navigation container">
@@ -123,23 +123,23 @@
     <h1 class="catalog-title">Сливочное мороженое</h1>
     <form class="catalog-search" action="https://echo.htmlacademy.ru" method="get">
       <h2 class="visually-hidden">Поиск по каталогу мороженого.</h2>
-      <fieldset class="selection">
+      <fieldset class="catalog-search__selection">
         <legend>Сортировка:</legend>
-        <select class="select-field" name="sorting-type">
+        <select class="catalog-search__select-field" name="sorting-type">
           <option value="popular">по популярности</option>
           <option value="price-increase">сначала недорогие</option>
           <option value="price-decrease">сначала дорогие</option>
           <option value="fat">по жирности</option>
         </select>
       </fieldset>
-      <fieldset class="price-range">
+      <fieldset class="catalog-search__price-range">
         <legend>Цена: 100 руб. – 500 руб.</legend>
         <input type="range" name="icecream-price" id="icecream-price" min="0" max="700" step="100">
-        <label for="icecream-price">Диапазон цен</label>
+        <label class="visually-hidden" for="icecream-price">Диапазон цен</label>
       </fieldset>
-      <fieldset class="fat-content">
+      <fieldset class="catalog-search__fat-content">
         <legend>Жирность:</legend>
-        <ul class="fat-content-list selection-list">
+        <ul class="catalog-search__fat-content-list selection-list">
           <li>
             <input type="radio" name="fat-content" id="fat0" value="fat0">
             <label for="fat0">0%</label>
@@ -155,9 +155,9 @@
             <label for="fat100">свыше 30%</label></li>
         </ul>
       </fieldset>
-      <fieldset class="fillers">
+      <fieldset class="catalog-search__fill">
         <legend>Наполнители:</legend>
-        <ul class="fillers-list selection-list">
+        <ul class="catalog-search__fill-list selection-list">
           <li>
             <input type="checkbox" name="chocolate" id="chocolate" checked>
             <label for="chocolate">шоколадные</label>
@@ -180,7 +180,7 @@
           </li>
         </ul>
       </fieldset>
-      <button class="btn search-submit">Применить</button>
+      <button class="catalog-search__button">Применить</button>
     </form>
     <h2 class="visually-hidden">Результаты поиска</h2>
     <ul class="item-list">
