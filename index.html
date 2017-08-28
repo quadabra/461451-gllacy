@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <title>HTML Academy: Глейси</title>
 </head>
-<body>
+<body class="index-page">
 
 <header class="page-header">
   <div class="wrapper">
@@ -78,27 +78,29 @@
         </li>
       </ul>
     </nav>
-    <div class="sub-navigation container">
-      <p class="contact-us">C 10 до 20, ежедневно
-        <a class="phone-number" href="tel:+78124502525">8 812 450-25-25</a>
-      </p>
-    </div>
   </div>
 </header>
 <main class="page-main">
   <div class="wrapper">
     <section class="slider-block container">
+      <p class="contact-us">C 10 до 20, ежедневно
+        <a class="phone-number" href="tel:+78124502525">8 812 450-25-25</a>
+      </p>
       <ul class="slider">
-        <li><input class="slider__button_first slider-button" type="radio" name="slider" id="first-slide" checked>
+        <li>
+          <input class="slider__button_first slider-button" type="radio" name="slider" id="first-slide" checked>
           <p class="slider-block__special-offer_text slider-first">Крем-брюле и пломбир с малиновым джемом</p>
         </li>
-        <li><input class="slider__button_second slider-button" type="radio" name="slider" id="second-slide"></li>
-        <li><input class="slider_button_third slider-button" type="radio" name="slider" id="third-slide"></li>
+        <li>
+          <input class="slider__button_second slider-button" type="radio" name="slider" id="second-slide">
+          <p class="slider-block__special-offer_text slider-second">Шоколадный пломбир и лимонный сорбет</p>
+        </li>
+        <li>
+          <input class="slider_button_third slider-button" type="radio" name="slider" id="third-slide">
+          <p class="slider-block__special-offer_text slider-third">Пломбир с помадкой и клубничный щербет</p>
+        </li>
       </ul>
       <div class="slider-block__special-offer">
-
-        <p class="slider-block__special-offer_text slider-second"></p>
-        <p class="slider-block__special-offer_text slider-third"></p>
         <a href="#" class="slider-block__special-offer_button">Давайте оба!</a>
       </div>
 
@@ -126,23 +128,35 @@
       <li class="popular item-list__item">
         <img src="img/1st_line_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
              height="267">
-        <span class="item-list__item_price">310 &#8381; <b>/кг</b></span>
+        <span class="item-list__item-price">310<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="popular item-list__item">
         <img src="img/1st_line_2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-        <span class="item-list__item_price">380 &#8381; <b>/кг</b></span>
+        <span class="item-list__item-price">380<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="popular item-list__item">
         <img src="img/1st_line_3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-        <span class="item-list__item_price">355 &#8381; <b>/кг</b></span>
+        <span class="item-list__item-price">355<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="popular item-list__item">
         <img src="img/1st_line_4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-        <span class="item-list__item_price">415 &#8381; <b>/кг</b></span>
+        <span class="item-list__item-price">415<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="">Сливочное крем-брюле с карамельной подливкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
     </ul>
     <section class="about-us container">
@@ -170,7 +184,7 @@
             вкусного,
             что у нас происходит.
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <input type="email" name="email-subscribe" placeholder="Электронная почта" id="subscribe-form">
+          <input class="subscribe-block__input" type="email" name="email-subscribe" placeholder="Электронная почта" id="subscribe-form">
           <label class="visually-hidden" for="subscribe-form">Введите адрес электронной почты</label>
           <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
         </form>
@@ -178,9 +192,7 @@
     </article>
     <section class="map-block">
       <h2 class="visually-hidden">Схема проезда и адрес магазина.</h2>
-      <img src="img/static-map.jpg"
-           alt="Адрес главного офиса и офлайн магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1200"
-           height="430">
+
       <div class="address-block">
         <p class="address-block__about">Адрес главного офиса и офлайн магазина:</p>
         <p class="address-block__text">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>

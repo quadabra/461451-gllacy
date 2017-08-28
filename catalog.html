@@ -14,10 +14,10 @@
           <img src="img/Logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation__item catalog-opener"><a class="catalog-opener_link" href="#">Каталог</a>
+          <li class="site-navigation__item catalog-opener page-current-item"><a class="catalog-opener_link" href="#">Каталог</a>
             <ul class="site-navigation__submenu element-hidden">
               <li class="site-navigation__submenu-item"><a href="#">Новинки</a></classb></li>
-              <li class="site-navigation__submenu-item"><a href="catalog.html">Сливочное</a></li>
+              <li class="site-navigation__submenu-item page-current-item"><a>Сливочное</a></li>
               <li class="site-navigation__submenu-item"><a href="#">Щербеты</a></li>
               <li class="site-navigation__submenu-item"><a href="#">Фруктовый лёд</a></li>
               <li class="site-navigation__submenu-item"><a href="#">Мелорин</a></li>
@@ -183,67 +183,103 @@
       <button class="catalog-search__button">Применить</button>
     </form>
     <h2 class="visually-hidden">Результаты поиска</h2>
-    <ul class="item-list">
+    <ul class="item-list container">
       <li class="item-list__item">
         <img src="img/1st_line_1.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267"
              height="267">
-        <b>310 &#8381; /кг</b>
+        <span class="item-list__item-price">310<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/1st_line_2.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
-        <b>380 &#8381; /кг</b>
+        <span class="item-list__item-price">380<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/1st_line_3.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
-        <b>355 &#8381; /кг</b>
+        <span class="item-list__item-price">355<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/1st_line_4.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
-        <b>415 &#8381; /кг</b>
+        <span class="item-list__item-price">415<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/2nd_line_1.png" alt="Сливочное с брусничным джемом" width="267" height="267">
-        <b>325 &#8381; /кг</b>
+        <span class="item-list__item-price">325<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с брусничным джемом</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/2nd_line_2.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
-        <b>410 &#8381; /кг</b>
+        <span class="item-list__item-price">410<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/2nd_line_3.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
-        <b>375 &#8381; /кг</b>
+        <span class="item-list__item-price">375<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/2nd_line_4.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
-        <b>320 &#8381; /кг</b>
+        <span class="item-list__item-price">320<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с шоколадной стружкой</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/3rd_line_1.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
-        <b>440 &#8381; /кг</b>
+        <span class="item-list__item-price">440<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/3rd_line_2.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
-        <b>435 &#8381; /кг</b>
+        <span class="item-list__item-price">435<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочноe с ментоловым сиропом</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/3rd_line_3.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
-        <b>355 &#8381; /кг</b>
+        <span class="item-list__item-price">355<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с кусочками черного шоколада</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="item-list__item">
         <img src="img/3rd_line_4.png" alt="Сливочное с мятным сиропом" width="267" height="267">
-        <b>420 &#8381; /кг</b>
+        <span class="item-list__item-price">420<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с мятным сиропом</a>
+        <div class="item-list__item-hover">
+          <button class="item-list__item-button" type="button">Быстрый просмотр</button>
+        </div>
       </li>
     </ul>
     <ul class="paginator">

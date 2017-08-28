@@ -2,17 +2,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: rgb(132, 157, 143);
 }
 a {
   text-decoration: none;
   color: #fff;
 }
-
+button {
+  font-family: 'Roboto', sans-serif;
+}
+.index-page {
+  background-image: url("../img/header_icecream1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
 .wrapper {
   margin: 0 auto;
   padding: 0;
   width: 1200px;
-  background-color: rgb(132, 157, 143);
+
 }
 .container {
   margin: 0 auto;
@@ -38,16 +46,30 @@ a {
 .no-text {
   font-size: 0;
 }
-
+.page-current-item {
+  background-color: rgb(208, 112, 88);
+  cursor: pointer;
+}
+.header-logo {
+  margin-top: 9px;
+}
 .top-menu-navigation ul {
   list-style: none;
 }
+.site-navigation,
+.user-navigation {
+  margin: 0;
+  padding: 0;
+}
 
-.site-navigation li,
-.user-navigation li {
+.site-navigation > li,
+.user-navigation > li {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+.user-navigation li:not(:last-child) {
+  margin: 0 5px;
 }
 .site-navigation__item {
   margin: 0;
@@ -65,7 +87,23 @@ a {
   color: inherit;
   border-radius: 16px;
 }
-
+.site-navigation__item > a::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  top: 24px;
+  left: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.site-navigation__item:nth-child(1):not(.page-current-item) > a::after {
+  width: 61px;
+}
+.site-navigation__item:nth-child(2) > a::after {
+  width: 142px;
+}
+.site-navigation__item:nth-child(3) > a::after {
+  width: 92px;
+}
 .site-navigation__item:hover,
 .site-navigation__item > a:focus,
 .user-navigation__item:hover,
@@ -81,6 +119,7 @@ a {
 .catalog-opener:hover .site-navigation__submenu,
 .catalog-opener_link:focus ~ .site-navigation__submenu {
   display: block;
+  z-index: 10;
 }
 .site-navigation__submenu {
   position: absolute;
@@ -132,8 +171,6 @@ a {
   background-color: #f6b5a5;
 }
 .user-navigation__item {
-  margin: 0;
-  padding: 0;
   position: relative;
   color: #fff;
   border-radius: 16px;
@@ -160,7 +197,10 @@ a {
   padding: 0;
   text-align: center;
 }
-
+.user-navigation__item:last-child {
+  width: 117px;
+  text-align: left;
+}
 .user-navigation__item:hover .svg-search,
 .user-navigation__item:hover .svg-enter,
 .user-navigation__item:hover .svg-cart {
@@ -190,9 +230,12 @@ a {
 .search-opener:hover .user-navigation__search-form,
 .search-opener_link:focus ~ .user-navigation__search-form {
   display: block;
+  z-index: 10;
 }
 .contact-us {
-  margin-left: auto;
+  position: absolute;
+  top: -18px;
+  right: 0;
   padding: 0;
   display: block;
   font-size: 14px;
@@ -201,12 +244,15 @@ a {
   text-align: right;
 }
 .contact-us a {
+  margin-top: 3px;
+  margin-right: -1px;
   display: block;
   padding: 0;
   font-size: 22px;
 }
 
 .slider {
+  vertical-align: bottom;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -216,24 +262,39 @@ a {
   margin: 0;
   padding: 0;
 }
-.slider-first {
-  background-image: url("../img/header_icecream1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: visible;
+.slider-button {
+
+}
+.slider-button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 .slider-block__special-offer_text {
-
+  margin: 0;
   position: absolute;
   left: 50%;
+  top: 314px;
   transform: translateX(-50%);
   font-size: 60px;
   font-weight: bold;
+  line-height: 60px;
   color: #fff;
   width: 700px;
+  text-align: center;
   display: none;
 }
 .slider__button_first:checked ~ .slider-first {
+  display: block;
+}
+.slider__button_second:checked ~ .slider-second {
+  display: block;
+}
+.slider_button_third:checked ~ .slider-third {
   display: block;
 }
 .element-berry {
@@ -271,6 +332,10 @@ a {
 }
 .item-list__item {
   position: relative;
+  text-align: center;
+}
+.item-list__item img {
+  margin-bottom: 8px;
 }
 .popular::before {
   content: "";
@@ -279,72 +344,128 @@ a {
   height: 61px;
   background-image: url("../img/hit.svg");
 }
+.item-list__item-hover {
+  display: none;
+  position: absolute;
+  top:-6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 293px;
+  height: 405px;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+}
+.item-list__item:hover {
+  z-index: 1;
+}
+.item-list__item:hover .item-list__item-hover {
+  display: block;
+  z-index: -1;
+}
+.item-list__item a {
+  font-size: 16px;
+  line-height: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.item-list__item a:hover,
+.item-list__item a:focus,
+.item-list__item a:active {
+  color: rgb(255, 188, 158);
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+.item-list__item-price {
+  display: block;
+  position: absolute;
+  top: 210px;
+  left: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+.item-list__item-price b {
+  padding-left: 4px;
+  font-size: 30px;
+}
+.item-list__item-price svg {
+
+  position: relative;
+  bottom: -3px;
+  left: 3px;
+  margin: 0;
+  padding: 0;
+  filter: drop-shadow(1px 1px 3px rgba(49, 50, 53, 0.5));
+}
 .about-us {
   background-image: url("../img/pattern.jpg");
   background-color: #efe3cb;
   border-radius: 15px;
 }
 .about-us__title {
+  margin-left: 21px;
+  margin-top: 25px;
+  margin-bottom: -1px;
+  padding: 0;
+  align-self: flex-start;
   font-size: 24px;
   line-height: 30px;
+  letter-spacing: 0.005em;
   color: #323232;
 }
 .about-us__description {
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-left: 76px;
+  padding-right: 10px;
   position: relative;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
 }
-.about-us__description:nth-of-type(1)::before {
+.about-us__description::before {
   content: "";
   position: absolute;
   width: 49px;
   height: 49px;
-  left: -49px;
-  background-image: url("../img/ice-cream.svg");
+  left: -56px;
+  top: -13px;
   background-repeat: no-repeat;
+}
+.about-us__description:nth-of-type(1)::before {
+  background-image: url("../img/ice-cream.svg");
 }
 .about-us__description:nth-of-type(2)::before {
-  content: "";
-  position: absolute;
-  width: 49px;
-  height: 49px;
-  left: -49px;
+  left: -59px;
   background-image: url("../img/cow.svg");
-  background-repeat: no-repeat;
 }
 .about-us__description:nth-of-type(3)::before {
-  content: "";
-  position: absolute;
-  width: 49px;
-  height: 49px;
-  left: -49px;
   background-image: url("../img/eco.svg");
-  background-repeat: no-repeat;
 }
 .about-us__description:nth-of-type(4)::before {
-  content: "";
-  position: absolute;
-  width: 49px;
-  height: 49px;
-  left: -49px;
+  left: -59px;
   background-image: url("../img/thermometer.svg");
-  background-repeat: no-repeat;
 }
 .blog-spotlight {
   background-color: #fff;
   background-image: url("../img/strawberry_background.jpg");
   background-repeat: no-repeat;
-
   background-position: 205px -35px;
   border-radius: 15px;
 }
 .blog-spotlight__title {
+  margin: 24px 0 0 20px;
   font-size: 16px;
   line-height: 22px;
   color: #323232;
 }
 .blog-spotlight__text {
+  display: block;
+  margin: 3px 0 0 20px;
+  width: 290px;
   font-size: 24px;
   line-height: 30px;
   color: #323232;
@@ -355,8 +476,14 @@ a {
   padding: 0;
   background-image: url("../img/background_post.png");
   background-repeat: no-repeat;
-min-height: 220px;
+  min-height: 220px;
   border-radius: 15px;
+}
+.subscribe-block__text {
+  margin: 28px 10px 0 22px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5a5a5a;
 }
 .subscribe-block__form {
   border: 1px solid transparent;
@@ -366,14 +493,22 @@ min-height: 220px;
   width: 550px;
   height: 210px;
 }
-.subscribe-block__text {
-
-  margin: 0;
-  margin-top: 20px;
-  font-size: 16px;
-  line-height: 22px;
-  color: #5a5a5a;
+.subscribe-block__input {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-left: 22px;
+  margin-top: 36px;
+  padding-left: 12px;
+  width: 368px;
+  height: 44px;
 }
+.map-block {
+  width: 1200px;
+  min-height: 430px;
+  background-image: url("../img/static-map.jpg");
+  background-repeat: no-repeat;
+}
+
 .address-block {
   width: 302px;
   height: 305px;
@@ -442,6 +577,7 @@ min-height: 220px;
 /******************************* Вторая страница ***********************/
 .catalog-page {
   background-image: url("../img/catalog_background.png");
+  background-repeat: repeat-x;
 }
 .breadcrumbs {
   list-style: none;
@@ -487,6 +623,10 @@ min-height: 220px;
 
 /******************************* КНОПКИ ***************************/
 .slider-block__special-offer_button {
+  position: absolute;
+  top: 465px;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   box-sizing: border-box;
   width: 278px;
@@ -527,11 +667,15 @@ min-height: 220px;
   box-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
 }
 .button-medium:hover,
-.button-medium:focus {
+.button-medium:focus,
+.item-list__item-button:hover,
+.item-list__item-button:focus {
   background-image: linear-gradient(to top, #ec6e5d 0%, #f58669 100%);
   box-shadow: 0 1px 2px #ac1000;
+  outline: none;
 }
-.button-medium:active {
+.button-medium:active,
+.item-list__item-button:active {
   background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
   box-shadow: inset 0 2px 2px #942718;
 }
@@ -544,6 +688,8 @@ min-height: 220px;
   width: 165px;
 }
 .subscribe-block__button {
+  margin-left: 7px;
+  display: inline-block;
   width: 129px;
   color: #fff;
   padding-top: 0;
@@ -554,6 +700,26 @@ min-height: 220px;
   font-size: 18px;
   padding-top: 10px;
 }
+.item-list__item-button {
+  display: block;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 200px;
+  height: 46px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 21px;
+  background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
+  box-shadow: 0 1px 2px #ac1000;
+}
+
 /************************************ СЕТКА 1 страница *********************************/
 
 
@@ -571,11 +737,9 @@ min-height: 220px;
 }
 .slider-block {
   position: relative;
-  min-height: 573px;
+  min-height: 530px;
 }
-.slider {
 
-}
 .promo-block {
   margin-top: 40px;
   display: flex;
@@ -593,11 +757,11 @@ min-height: 220px;
   min-height: 330px;
 }
 .about-us {
-  margin-top: 40px;
+  margin-top: 32px;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   min-height: 306px;
-  justify-content: space-between;
 }
 .about-us__title {
   flex-basis: 100%;
