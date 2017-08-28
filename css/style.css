@@ -60,20 +60,15 @@ button {
 .user-navigation {
   margin: 0;
   padding: 0;
+  display: flex;
 }
-
-.site-navigation > li,
-.user-navigation > li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-.user-navigation li:not(:last-child) {
-  margin: 0 5px;
+.site-navigation {
+  margin-left: 10px;
 }
 .site-navigation__item {
   margin: 0;
   padding: 0;
+  margin-left: -4px;
   position: relative;
   color: #fff;
   border-radius: 16px;
@@ -745,7 +740,8 @@ display: none;
 }
 .user-navigation {
   margin-left: auto;
-  min-width: 267px;
+  min-width: 260px;
+  justify-content: space-between;
 }
 .sub-navigation {
   display: flex;
@@ -817,4 +813,7 @@ display: none;
   justify-content: space-between;
   align-items: center;
   width: 865px;
+}
+.phone-block {
+  position: relative;
 }
