@@ -263,16 +263,31 @@ button {
   padding: 0;
 }
 .slider-button {
+display: none;
+}
+.slider-button__label {
+  display: block;
+  width: 26px;
 
 }
-.slider-button:after {
+.slider-button__label:before {
   content: "";
   position: absolute;
+  bottom: 23px;
   display: block;
+  box-sizing: border-box;
   width: 21px;
   height: 21px;
   border-radius: 50%;
   border: 2px solid #fff;
+}
+.slider-button:hover ~ .slider-button__label:before {
+  background-color: rgba(248, 247, 244, 0.4);
+  cursor: pointer;
+}
+.slider-button:checked ~ .slider-button__label:before {
+  background-color: rgb(248, 247, 244);
+  cursor: pointer;
 }
 .slider-block__special-offer_text {
   margin: 0;
