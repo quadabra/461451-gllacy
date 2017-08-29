@@ -207,8 +207,8 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6000760813474!2d30.32536854100332!3d59.938778058850936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503953201293"
           width="1200" height="430" frameborder="0" style="border:0" allowfullscreen></iframe>
         <div class="address-block">
-          <p class="address-block__about">Адрес главного офиса и офлайн магазина:</p>
-          <p class="address-block__text">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <p class="address-block__about address-block__text_short">Адрес главного офиса и офлайн магазина:</p>
+          <p class="address-block__text address-block__text_address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
           <p class="address-block__about">Для заказов по телефону:</p>
           <a class="address-block__text" href="tel:+78124502525">8 812 450-25-25</a>
           <p class="address-block__about">(с 10 до 20 ежедневно)</p>
@@ -269,14 +269,18 @@
           </li>
         </ul>
         <ul class="about-block">
-          <li><a class="about-block__info about-block__info_bold" href="#">Для поставщиков</a></li>
-          <li><a class="about-block__info" href="#">Наши документы</a></li>
-          <li><a class="about-block__info" href="#">О производстве</a></li>
-          <li><a class="about-block__info" href="#">Экологические стандарты</a></li>
+          <div>
+            <li><a class="about-block__info about-block__info_bold" href="#">Для поставщиков</a></li>
+            <li><a class="about-block__info" href="#">О производстве</a></li>
+          </div>
+          <div>
+            <li><a class="about-block__info" href="#">Наши документы</a></li>
+            <li><a class="about-block__info" href="#">Экологические стандарты</a></li>
+          </div>
         </ul>
         <address class="copyright-block">
           <img src="img/logo-htmlacademy.svg" alt="логотип HTML Academy" width="108" height="39">
-          <p class="copyright-block__info">Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a>&copy;
+          <p class="copyright-block__info">Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy;
             2017</p>
         </address>
       </div>
@@ -284,17 +288,17 @@
   </footer>
 
   <section class="modal modal-feedback">
-    <h3>Мы обязательно вам ответим!</h3>
-    <button class="modal-close" type="button">Закрыть</button>
-    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+    <h3 class="modal-title">Мы обязательно вам ответим!</h3>
+    <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
       <label class="visually-hidden" for="feedback-name">Представьтесь пожалуйста</label>
       <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
       <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
-      <textarea name="feedback-text" rows="5" cols="100" placeholder="Напишите что-нибудь..."
+      <textarea name="feedback-text" rows="8" cols="30" placeholder="Напишите что-нибудь..."
                 id="feedback-message"></textarea>
       <label class="visually-hidden" for="feedback-message">Введите текст сообщения</label>
-      <button class="btn btn-feedback-send" type="submit">Отправить</button>
+      <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
     </form>
   </section>
 </div>

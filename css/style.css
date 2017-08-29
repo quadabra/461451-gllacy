@@ -19,7 +19,6 @@ button {
 }
 .container {
   margin: 0 auto;
-
   padding: 0;
   width: 1146px;
 }
@@ -522,23 +521,26 @@ button {
   height: 305px;
   background-color: #fff;
   border-radius: 15px;
+  padding: 30px 25px;
 }
 .address-block__about {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
 }
 .address-block__text {
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
   color: #323232;
 }
-.social-block {
-  list-style: none;
+.address-block__text_short {
+  width: 150px;
 }
-.social-block li {
-  display: inline-block;
+.address-block__text_address {
+  margin-bottom: 10px;
 }
 .social-block__button {
   display: block;
@@ -557,23 +559,28 @@ button {
   fill: #e9e9e9;
   border: 3px solid #e9e9e9;
 }
-.about-block {
-  list-style: none;
-  flex-basis: 330px;
-}
-.about-block li {
-  display: inline-block;
-}
 .about-block__info {
-  margin-left: 20px;
   font-size: 13px;
   line-height: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.about-block__info:hover,
+.about-block__info:focus,
+.about-block__info:active {
+  color: rgb(255, 188, 158);
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 .about-block__info_bold {
   font-weight: bold;
+  position: relative;
 }
-.copyright-block {
-
+.about-block__info_bold::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: -20px;
+  background: url("../img/heart.svg") no-repeat;
 }
 .copyright-block__info {
   font-size: 12px;
@@ -581,7 +588,64 @@ button {
   color: #fff;
   font-style: normal;
 }
-
+.copyright-block__info a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.copyright-block__info a:hover,
+.copyright-block__info a:focus,
+.copyright-block__info a:active {
+  color: rgb(255, 188, 158);
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+/******************************* Modal Window*********************/
+.modal {
+margin: 0 auto;
+}
+.modal-feedback {
+  width: 447px;
+  height: 442px;
+  padding: 20px 25px 27px;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #f9f8f5;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-title {
+  font-size: 24px;
+  margin: 0;
+  color: #323232;
+}
+.modal-feedback__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.modal-feedback__feedback-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 355px;
+}
+.modal-feedback__feedback-form input {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: 267px;
+  height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
+  color: #999999;
+}
+.modal-feedback__feedback-form textarea {
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
+}
+.modal-feedback__send-button {
+  align-self: flex-end;
+}
 /******************************* Вторая страница ***********************/
 .catalog-page {
   background-color: #849d8f;
@@ -671,6 +735,7 @@ button {
   border-radius: 23px;
   background-image: linear-gradient(to top, #ca3824 0%, #f26843 100%);
   box-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
+  cursor: pointer;
 }
 .button-medium:hover,
 .button-medium:focus,
@@ -696,12 +761,14 @@ button {
 .subscribe-block__button {
   margin-left: 7px;
   display: inline-block;
+  vertical-align: middle;
   width: 129px;
   color: #fff;
-  padding-top: 0;
+  padding-bottom: 12px;
   border: none;
 }
 .address-block__button {
+  margin-top: 20px;
   width: 252px;
   font-size: 18px;
   padding-top: 10px;
@@ -725,7 +792,21 @@ button {
   background-image: linear-gradient(to top, #e74a35 0%, #f26843 100%);
   box-shadow: 0 1px 2px #ac1000;
 }
-
+.modal-feedback__send-button {
+  border: none;
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 1px;
+  width: 139px;
+}
+.modal-feedback__close-button {
+  display: block;
+  width: 17px;
+  height: 18px;
+  border: none;
+  background: url("../img/cross-big.svg") no-repeat;
+  cursor: pointer;
+}
 /************************************ СЕТКА 1 страница *********************************/
 
 
@@ -758,7 +839,7 @@ button {
   justify-content: space-between;
 }
 .item-list {
-  margin-top: 40px;
+  margin-top: 39px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -781,7 +862,7 @@ button {
   flex-basis: 482px;
 }
 .info-block {
-  margin-top: 40px;
+  margin-top: 39px;
   display: flex;
   justify-content: space-between;
 }
@@ -793,17 +874,53 @@ button {
   flex-basis: 560px;
 }
 .map-block {
-  margin-top: 40px;
+  margin-top: 39px;
   position: relative;
 }
 .address-block {
   position: absolute;
   right: 27px;
   top: 62px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 .footer-container {
+  min-height: 103px;
+  padding: 0;
+  margin-top: -3px;
   display: flex;
   justify-content: space-between;
+}
+.social-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 185px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-block {
+  list-style: none;
+  padding-left: 2px;
+  display: flex;
+  flex-basis: 305px;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright-block {
+  display: flex;
+  flex-direction: column;
+}
+.copyright-block img {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.copyright-block__info {
+  margin-top: 5px;
 }
 /*************************** Сетка 2ая страница  ************************/
 
