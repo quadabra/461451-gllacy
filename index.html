@@ -12,7 +12,6 @@
 <input class="slider__button_second slider-button element-hidden" type="radio" name="slider" id="second-slide">
 <input class="slider__button_third slider-button element-hidden" type="radio" name="slider" id="third-slide">
 <div class="index-background-container">
-  </ul>
   <header class="page-header">
     <div class="wrapper">
       <nav class="top-menu-navigation container">
@@ -22,7 +21,7 @@
         <ul class="site-navigation">
           <li class="site-navigation__item catalog-opener"><a class="catalog-opener_link" href="#">Каталог</a>
             <ul class="site-navigation__submenu element-hidden">
-              <li class="site-navigation__submenu-item"><a href="#">Новинки</a></classb></li>
+              <li class="site-navigation__submenu-item"><a href="#">Новинки</a></li>
               <li class="site-navigation__submenu-item"><a href="catalog.html">Сливочное</a></li>
               <li class="site-navigation__submenu-item"><a href="#">Щербеты</a></li>
               <li class="site-navigation__submenu-item"><a href="#">Фруктовый лёд</a></li>
@@ -48,26 +47,29 @@
             </form>
 
           </li>
-          <li class="user-navigation__item"><a href="#">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19">
-              <g class="svg-enter" fill="#fff">
-                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-                <path
-                  d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
-              </g>
-            </svg>
-            Вход</a>
-            <div class="login-form-container element-hidden">
-              <form class="user-navigation__login-form" action="https://echo.htmlacademy.ru" method="post">
-                <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
-                <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
-                <input type="password" name="password" placeholder="Пароль" id="password-field">
-                <label for="password-field"></label>
-                <button class="btn btn-login" type="submit">Войти</button>
-              </form>
-              <a href="#">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
-            </div>
+          <li class="user-navigation__item login-opener">
+            <a class="login-opener-link" href="#">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19">
+                <g class="svg-enter" fill="#fff">
+                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
+                  <path
+                    d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+                </g>
+              </svg>
+              Вход</a>
+            <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
+              <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
+              <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
+              <input type="password" name="password" placeholder="Пароль" id="password-field">
+              <label class="visually-hidden" for="password-field">Пароль</label>
+              <div class="user-navigation__login-form-container">
+                <button class="button-medium user-navigation__login-form-buttton" type="submit">Войти</button>
+                <div class="user-navigation__login-form-link-container">
+                  <a class="user-navigation__search-form-link" href="#">Забыли пароль?</a>
+                  <a class="user-navigation__search-form-link" href="">Новая регистрация</a>
+                </div>
+              </div>
+            </form>
           </li>
           <li class="user-navigation__item">
             <a href="#">
@@ -269,38 +271,43 @@
           </li>
         </ul>
         <ul class="about-block">
-          <div>
-            <li><a class="about-block__info about-block__info_bold" href="#">Для поставщиков</a></li>
-            <li><a class="about-block__info" href="#">О производстве</a></li>
-          </div>
-          <div>
-            <li><a class="about-block__info" href="#">Наши документы</a></li>
-            <li><a class="about-block__info" href="#">Экологические стандарты</a></li>
-          </div>
+          <li>
+            <div>
+              <a class="about-block__info about-block__info_bold" href="#">Для поставщиков</a>
+              <a class="about-block__info" href="#">О производстве</a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a class="about-block__info" href="#">Наши документы</a>
+              <a class="about-block__info" href="#">Экологические стандарты</a>
+            </div>
+          </li>
         </ul>
         <address class="copyright-block">
           <img src="img/logo-htmlacademy.svg" alt="логотип HTML Academy" width="108" height="39">
-          <p class="copyright-block__info">Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy;
+          <p class="copyright-block__info">Сделано в <a href="www.htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            &copy;
             2017</p>
         </address>
       </div>
-    </div>
-  </footer>
+</div>
+</footer>
 
-  <section class="modal modal-feedback">
-    <h3 class="modal-title">Мы обязательно вам ответим!</h3>
-    <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
-    <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
-      <label class="visually-hidden" for="feedback-name">Представьтесь пожалуйста</label>
-      <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
-      <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
-      <textarea name="feedback-text" rows="8" cols="30" placeholder="Напишите что-нибудь..."
-                id="feedback-message"></textarea>
-      <label class="visually-hidden" for="feedback-message">Введите текст сообщения</label>
-      <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
-    </form>
-  </section>
+<section class="modal modal-feedback">
+  <h3 class="modal-title">Мы обязательно вам ответим!</h3>
+  <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+  <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
+    <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
+    <label class="visually-hidden" for="feedback-name">Представьтесь пожалуйста</label>
+    <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
+    <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
+    <textarea name="feedback-text" rows="8" cols="30" placeholder="Напишите что-нибудь..."
+              id="feedback-message"></textarea>
+    <label class="visually-hidden" for="feedback-message">Введите текст сообщения</label>
+    <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
+  </form>
+</section>
 </div>
 </body>
 </html>

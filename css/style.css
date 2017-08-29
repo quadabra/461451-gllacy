@@ -165,7 +165,7 @@ button {
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.user-navigation__item a {
+.user-navigation__item > a {
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -198,12 +198,20 @@ button {
 .user-navigation__search-form {
   position: absolute;
   right: 0;
+  top: 37px;
   margin: 0;
   padding: 0;
   min-width: 342px;
   min-height: 85px;
   background-color: rgb(248, 247, 244);
   border-radius: 5px;
+}
+.user-navigation__search-form::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px;
+  top: -7px;
 }
 .user-navigation__search-form input[type=search] {
   display: block;
@@ -219,6 +227,58 @@ button {
 .search-opener:hover .user-navigation__search-form,
 .search-opener_link:focus ~ .user-navigation__search-form {
   display: block;
+  z-index: 10;
+}
+.user-navigation__login-form {
+  position: absolute;
+  width: 277px;
+  height: 214px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  right: 0;
+  top: 37px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+}
+.user-navigation__login-form:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  right: 0;
+  top: -5px;
+}
+.user-navigation__login-form input {
+  display: block;
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid rgb(211, 211, 210);;
+}
+.user-navigation__login-form-link-container {
+  margin: 0;
+  padding: 0;
+  width: 120px;
+}
+.user-navigation__search-form-link {
+  padding: 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  border-bottom: 1px solid rgba(50, 50, 50, 0.3);
+}
+.user-navigation__search-form-link:hover {
+  color: rgb(255, 188, 158);
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+.login-opener:hover .user-navigation__login-form,
+.login-opener-link:focus ~ .user-navigation__login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 10;
 }
 .contact-us {
@@ -560,6 +620,7 @@ button {
   border: 3px solid #e9e9e9;
 }
 .about-block__info {
+  display: block;
   font-size: 13px;
   line-height: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -795,8 +856,7 @@ margin: 0 auto;
 .modal-feedback__send-button {
   border: none;
   color: #fff;
-  padding-top: 0;
-  padding-bottom: 1px;
+  padding-bottom: 10px;
   width: 139px;
 }
 .modal-feedback__close-button {
@@ -806,6 +866,13 @@ margin: 0 auto;
   border: none;
   background: url("../img/cross-big.svg") no-repeat;
   cursor: pointer;
+}
+.user-navigation__login-form-buttton {
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  padding-bottom: 10px;
+  width: 100px;
 }
 /************************************ СЕТКА 1 страница *********************************/
 
@@ -921,6 +988,12 @@ margin: 0 auto;
 }
 .copyright-block__info {
   margin-top: 5px;
+}
+
+.user-navigation__login-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /*************************** Сетка 2ая страница  ************************/
 
