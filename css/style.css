@@ -1,21 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 a {
   text-decoration: none;
   color: #fff;
 }
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 .wrapper {
   margin: 0 auto;
   padding: 0;
   width: 1200px;
-
 }
 .container {
   margin: 0 auto;
@@ -25,6 +23,11 @@ button {
 .element-hidden{
   display: none;
 }
+/*
+.modal {
+  display: none;
+}
+*/
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -307,26 +310,24 @@ button {
 }
 .slider-button__label {
   display: block;
+  box-sizing: border-box;
   width: 21px;
   height: 21px;
   margin-right: 8px;
   border-radius: 50%;
-}
-.slider-button__label::before {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
   border: 2px solid #fff;
-
 }
-.slider-button__label:hover .slider-button__label::before {
+.slider-button__label:hover {
   background-color: rgba(248, 247, 244, 0.4);
   cursor: pointer;
 }
-.slider__button_first:checked ~ .label-first:before {
+.slider__button_first:checked ~ .index-background-container .label-first {
+  background-color: rgb(248, 247, 244);
+}
+.slider__button_second:checked ~ .index-background-container .label-second {
+  background-color: rgb(248, 247, 244);
+}
+.slider__button_third:checked ~ .index-background-container .label-third {
   background-color: rgb(248, 247, 244);
 }
 .slider-block__special-offer_text {
@@ -357,13 +358,13 @@ button {
   background-repeat: no-repeat;
   background-position: center top;
 }
-.slider__button_first:checked ~ .slider-first {
+.slider__button_first:checked ~ .index-background-container .slider-first {
   display: block;
 }
-.slider__button_second:checked ~ .slider-second {
+.slider__button_second:checked ~ .index-background-container .slider-second {
   display: block;
 }
-.slider__button_third:checked ~ .slider-third {
+.slider__button_third:checked ~ .index-background-container .slider-third {
   display: block;
 }
 .element-berry {
@@ -621,8 +622,12 @@ button {
   fill: #e9e9e9;
   border: 3px solid #e9e9e9;
 }
+.about-block li {
+  margin-left: 10px;
+}
 .about-block__info {
-  display: block;
+  display: inline-block;
+  vertical-align: baseline;
   font-size: 13px;
   line-height: 18px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -705,6 +710,8 @@ margin: 0 auto;
 .modal-feedback__feedback-form textarea {
   border: 1px solid rgba(178, 178, 178, 0.5);
   border-radius: 5px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 .modal-feedback__send-button {
   align-self: flex-end;
@@ -857,7 +864,7 @@ margin: 0 auto;
 }
 /******************************* КНОПКИ ***************************/
 .slider-block__special-offer_button {
-  margin: auto auto 0;
+  margin: 30px auto 1px;
   display: block;
   box-sizing: border-box;
   width: 278px;
@@ -1096,7 +1103,7 @@ margin: 0 auto;
   list-style: none;
   padding-left: 2px;
   display: flex;
-  flex-basis: 305px;
+  flex-basis: 320px;
   justify-content: space-between;
   align-items: center;
 }
