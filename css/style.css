@@ -1136,3 +1136,7 @@ margin: 0 auto;
 .phone-block {
   position: relative;
 }
+.paginator {
+  display: flex;
+  justify-content: flex-end;
+}
