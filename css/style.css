@@ -208,6 +208,7 @@ button {
   min-height: 85px;
   background-color: rgb(248, 247, 244);
   border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 .user-navigation__search-form::before {
   content: "";
@@ -242,6 +243,7 @@ button {
   top: 37px;
   background-color: #f8f7f4;
   border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 .user-navigation__login-form:before {
   content: "";
@@ -732,6 +734,7 @@ margin: 0 auto;
   border-radius: 5px;
   background-color: #f8f7f4;
   color: #323232;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 .user-navigation__cart-block:before {
