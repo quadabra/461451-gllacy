@@ -1123,6 +1123,55 @@ margin: 0 auto;
 .catalog-search__fill-list input:checked ~ label:after {
   display: block;
 }
+.paginator li {
+  margin-left: 3px;
+}
+.paginator__button_prev {
+  display: block;
+  width: 25px;
+  height: 26px;
+  box-sizing: border-box;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  transform: rotate(180deg);
+}
+.paginator__button_next {
+  display: block;
+  width: 20px;
+  height: 26px;
+  box-sizing: border-box;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.paginator__button_disabled {
+  opacity: 0.2;
+}
+.paginator__button_number {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.paginator__current-page,
+.paginator__button_number:active:not(.paginator__current-page) {
+  color: #323232;
+  background-color: rgba(255, 255, 255, 1);
+}
+.paginator__button_number:hover:not(.paginator__current-page),
+.paginator__button_number:focus:not(.paginator__current-page) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.paginator__current-page,
+.paginator__button_number:active {
+  color: #323232;
+  background-color: rgb(255, 255, 255);
+}
 /******************************* КНОПКИ ***************************/
 .slider-block__special-offer_button {
   margin: 30px auto 1px;
@@ -1149,7 +1198,6 @@ margin: 0 auto;
 .slider-block__special-offer_button:active {
   box-shadow: inset 0 2px 2px #942718;
   background-color: rgba(0, 0, 0, 0.07);
-
   background-image: linear-gradient(to top, #e1613e 0%, #d74531 100%);
 }
 .button-medium {
@@ -1397,11 +1445,12 @@ margin: 0 auto;
   flex-direction: column;
 }
 .copyright-block img {
-  margin-top: 15px;
+  margin-top: 17px;
+  margin-left: 2px;
   margin-bottom: 0;
 }
 .copyright-block__info {
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .user-navigation__login-form-container {
@@ -1425,6 +1474,8 @@ margin: 0 auto;
   position: relative;
 }
 .paginator {
+  margin: 43px auto 33px;
   display: flex;
   justify-content: flex-end;
+  list-style: none;
 }
