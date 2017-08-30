@@ -142,16 +142,17 @@
         <h2 class="visually-hidden">Поиск по каталогу мороженого.</h2>
         <fieldset class="catalog-search__selection">
           <legend>Сортировка:</legend>
-          <select class="catalog-search__select-field" name="sorting-type">
-            <option value="popular">по популярности</option>
-            <option value="price-increase">сначала недорогие</option>
-            <option value="price-decrease">сначала дорогие</option>
-            <option value="fat">по жирности</option>
-          </select>
+            <select class="catalog-search__select-field" name="sorting-type">
+              <option value="popular">по популярности</option>
+              <option value="price-increase">сначала недорогие</option>
+              <option value="price-decrease">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
         </fieldset>
-        <fieldset class="catalog-search__price-range">
+        <fieldset class="catalog-search__price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <input type="range" name="icecream-price" id="icecream-price" min="0" max="700" step="100">
+          <div class="catalog-search__price-pointer"></div>
+          <input class="catalog-search__price-range" type="range" name="icecream-price" id="icecream-price" min="0" max="700" step="100" value="500">
           <label class="visually-hidden" for="icecream-price">Диапазон цен</label>
         </fieldset>
         <fieldset class="catalog-search__fat-content">
@@ -159,17 +160,17 @@
           <ul class="catalog-search__fat-content-list selection-list">
             <li>
               <input type="radio" name="fat-content" id="fat0" value="fat0">
-              <label for="fat0">0%</label>
+              <label for="fat0" tabindex="0">0%</label>
             </li>
             <li>
               <input type="radio" name="fat-content" id="fat10" value="fat10" checked>
-              <label for="fat10">до 10%</label></li>
+              <label for="fat10" tabindex="0">до 10%</label></li>
             <li>
               <input type="radio" name="fat-content" id="fat30" value="fat30">
-              <label for="fat30">до 30%</label></li>
+              <label for="fat30" tabindex="0">до 30%</label></li>
             <li>
               <input type="radio" name="fat-content" id="fat100" value="fat100">
-              <label for="fat100">выше 30%</label></li>
+              <label for="fat100" tabindex="0">выше 30%</label></li>
           </ul>
         </fieldset>
         <fieldset class="catalog-search__fill">
@@ -177,27 +178,27 @@
           <ul class="catalog-search__fill-list selection-list">
             <li>
               <input type="checkbox" name="chocolate" id="chocolate" checked>
-              <label for="chocolate">шоколадные</label>
+              <label for="chocolate" tabindex="0">шоколадные</label>
             </li>
             <li>
               <input type="checkbox" name="sugar" id="sugar" checked>
-              <label for="sugar">сахарные присыпки</label>
+              <label for="sugar" tabindex="0">сахарные присыпки</label>
             </li>
             <li>
               <input type="checkbox" name="fruit" id="fruit">
-              <label for="fruit">фрукты</label>
+              <label for="fruit" tabindex="0">фрукты</label>
             </li>
             <li>
               <input type="checkbox" name="syrup" id="syrup">
-              <label for="syrup">сиропы</label>
+              <label for="syrup" tabindex="0">сиропы</label>
             </li>
             <li>
               <input type="checkbox" name="jam" id="jam">
-              <label for="jam">джемы</label>
+              <label for="jam" tabindex="0">джемы</label>
             </li>
           </ul>
         </fieldset>
-        <button class="catalog-search__button">Применить</button>
+        <button class="catalog-search__button" type="submit">Применить</button>
       </form>
       <h2 class="visually-hidden">Результаты поиска</h2>
     </div>
@@ -315,7 +316,9 @@
       </li>
       <li class="item-list__item">
         <img src="img/3rd_line_4.png" alt="Сливочное с мятным сиропом" width="267" height="267">
-        <span class="item-list__item-price">420<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36"><path fill="#FFF" d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
+        <span class="item-list__item-price">420<svg xmlns="http://www.w3.org/2000/svg" width="31" height="36"
+                                                    viewBox="0 0 31 36"><path fill="#FFF"
+                                                                              d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z"/></svg><b>/кг</b></span>
         <a href="#">Сливочное с мятным сиропом</a>
         <div class="item-list__item-hover">
           <button class="item-list__item-button" type="button">Быстрый просмотр</button>
