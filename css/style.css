@@ -1123,10 +1123,10 @@ margin: 0 auto;
 .catalog-search__fill-list input:checked ~ label:after {
   display: block;
 }
-.paginator li {
+.pagination li {
   margin-left: 3px;
 }
-.paginator__button_prev {
+.pagination__button_prev {
   display: block;
   width: 25px;
   height: 26px;
@@ -1136,7 +1136,7 @@ margin: 0 auto;
   background-position: 14px center;
   transform: rotate(180deg);
 }
-.paginator__button_next {
+.pagination__button_next {
   display: block;
   width: 20px;
   height: 26px;
@@ -1145,10 +1145,10 @@ margin: 0 auto;
   background-repeat: no-repeat;
   background-position: right center;
 }
-.paginator__button_disabled {
+.pagination__button_disabled {
   opacity: 0.2;
 }
-.paginator__button_number {
+.pagination__button_number {
   display: block;
   width: 26px;
   height: 26px;
@@ -1158,17 +1158,15 @@ margin: 0 auto;
   font-weight: 500;
   line-height: 26px;
 }
-.paginator__current-page,
-.paginator__button_number:active:not(.paginator__current-page) {
-  color: #323232;
-  background-color: rgba(255, 255, 255, 1);
-}
-.paginator__button_number:hover:not(.paginator__current-page),
-.paginator__button_number:focus:not(.paginator__current-page) {
+.pagination__button_number:hover:not(.pagination__current-page),
+.pagination__button_number:focus:not(.pagination__current-page) {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.paginator__current-page,
-.paginator__button_number:active {
+.pagination__button_number:active:not(.pagination__current-page) {
+  color: #323232;
+  background-color: rgb(255, 255, 255);
+}
+.pagination__current-page{
   color: #323232;
   background-color: rgb(255, 255, 255);
 }
@@ -1473,7 +1471,7 @@ margin: 0 auto;
 .phone-block {
   position: relative;
 }
-.paginator {
+.pagination {
   margin: 43px auto 33px;
   display: flex;
   justify-content: flex-end;
