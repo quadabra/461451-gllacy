@@ -20,6 +20,10 @@ button {
   padding: 0;
   width: 1146px;
 }
+.index-background-container {
+  min-width: 1200px;
+  margin: 0 auto;
+}
 .element-hidden{
   display: none;
 }
