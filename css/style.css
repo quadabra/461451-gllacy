@@ -23,6 +23,7 @@ button {
 .index-background-container {
   min-width: 1200px;
   margin: 0 auto;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 .element-hidden{
   display: none;
@@ -32,7 +33,9 @@ button {
   display: none;
 }
 */
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -44,13 +47,7 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.no-text {
-  font-size: 0;
-}
-.page-current-item {
-  background-color: rgb(208, 112, 88);
-  cursor: pointer;
-}
+
 .header-logo {
   margin-top: 9px;
 }
@@ -69,48 +66,47 @@ button {
 .site-navigation__item {
   margin: 0;
   padding: 0;
-  margin-left: -4px;
+  margin-left: -3px;
   position: relative;
+  height: 32px;
   color: #fff;
   border-radius: 16px;
 }
-.site-navigation__item > a {
-  display: block;
+.site-navigation__item-link {
   margin: 0;
   padding: 7px 16px;
+  padding-right: 16px;
+  font: inherit;
   font-size: 16px;
   font-weight: bold;
+  line-height: 32px;
   color: inherit;
   border-radius: 16px;
 }
-.site-navigation__item > a::after {
+.site-navigation__item-link:not(.page-current-link)::after {
   content: "";
+  display: block;
   position: absolute;
-  height: 0;
-  top: 24px;
+  bottom: 7px;
   left: 16px;
+  right: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.site-navigation__item:nth-child(1):not(.page-current-item) > a::after {
-  width: 61px;
-}
-.site-navigation__item:nth-child(2) > a::after {
-  width: 142px;
-}
-.site-navigation__item:nth-child(3) > a::after {
-  width: 92px;
-}
-.site-navigation__item:hover,
-.site-navigation__item > a:focus,
+.site-navigation__item-link:hover,
+.site-navigation__item-link:focus,
 .user-navigation__item:hover,
 .user-navigation__item > a:focus {
   background-color: #f8f7f4;
   color: #323232;
 }
-.site-navigation__item > a:active,
+.site-navigation__item-link:active,
 .user-navigation__item > a:active {
   box-shadow: inset 0 2px 1px #696969;
   background-color: #eeeeee;
+}
+.page-current-link {
+  background-color: rgb(208, 112, 88);
+  cursor: pointer;
 }
 .catalog-opener:hover .site-navigation__submenu,
 .catalog-opener_link:focus ~ .site-navigation__submenu {
@@ -380,7 +376,7 @@ button {
   background-image: url("../img/background_choco.jpg");
 }
 .promo-element_title {
-  margin: 18px auto 0 20px;
+  margin: 16px auto 0 20px;
   padding: 0;
   color: #fff;
   font-size: 35px;
@@ -540,10 +536,10 @@ button {
 }
 .blog-spotlight__text {
   display: block;
-  margin: 3px 0 0 20px;
+  margin: 5px 0 0 20px;
   width: 290px;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 29px;
   color: #323232;
   font-weight: bold;
   text-decoration: underline;
@@ -590,7 +586,7 @@ button {
   height: 305px;
   background-color: #fff;
   border-radius: 15px;
-  padding: 30px 25px;
+  padding: 29px 25px;
 }
 .address-block__about {
   margin: 0;
@@ -609,7 +605,8 @@ button {
   width: 150px;
 }
 .address-block__text_address {
-  margin-bottom: 10px;
+  margin-top: -3px;
+  margin-bottom: 13px;
 }
 .social-block__button {
   display: block;
@@ -1228,10 +1225,14 @@ margin: 0 auto;
 .promo-element__button_choco {
   margin: 43px 21px auto auto;
   width: 189px;
+  padding-top: 10px;
+  letter-spacing: 0.04em;
 }
 .promo-element__button_berry {
   margin: 43px 21px auto auto;
   width: 165px;
+  padding-top: 10px;
+  letter-spacing: 0.04em;
 }
 .subscribe-block__button {
   margin-left: 7px;
@@ -1455,6 +1456,10 @@ margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.item-list__item-link-container {
+  margin: 0 auto;
+  width: 98%;
 }
 /*************************** Сетка 2ая страница  ************************/
 
