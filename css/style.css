@@ -10,6 +10,10 @@ a {
 button {
   font-family: 'Roboto', 'Arial', sans-serif;
 }
+.item-list__item img {
+  width: 100%;
+  height: auto;
+}
 .wrapper {
   margin: 0 auto;
   padding: 0;
@@ -72,9 +76,10 @@ input[type="radio"].visually-hidden {
   color: #fff;
 }
 .site-navigation__item-link {
-  margin: 0;
-  padding: 7px 16px;
-  font: inherit;
+  display: block;
+  vertical-align: middle;
+  padding: 0 16px;
+  height: 32px;
   font-size: 16px;
   font-weight: bold;
   line-height: 32px;
@@ -124,10 +129,11 @@ input[type="radio"].visually-hidden {
 }
 .site-navigation__submenu::before {
   content: "";
-  width: 143px;
   height: 5px;
   position: absolute;
   top: -5px;
+  left: 0;
+  right: 0;
   }
 .site-navigation__submenu-item {
   margin: 0;
@@ -137,7 +143,7 @@ input[type="radio"].visually-hidden {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.site-navigation__submenu-item a {
+.site-navigation__submenu-item > a {
   display: block;
   margin-left: 6px;
   margin-right: 8px;
@@ -148,7 +154,7 @@ input[type="radio"].visually-hidden {
   line-height: 32px;
   min-width: 114px;
 }
-.site-navigation__submenu-item:first-child a {
+.site-navigation__submenu-item:first-child > a {
   font-weight: bold;
   line-height: 38px;
   border-bottom: 1px solid #d2d1cf;
@@ -161,6 +167,7 @@ input[type="radio"].visually-hidden {
   background-color: #f6b5a5;
 }
 .user-navigation__item {
+  margin-left: 12px;
   position: relative;
   color: #fff;
   border-radius: 16px;
@@ -193,7 +200,10 @@ input[type="radio"].visually-hidden {
 }
 .user-navigation__item:hover .svg-search,
 .user-navigation__item:hover .svg-enter,
-.user-navigation__item:hover .svg-cart {
+.user-navigation__item:hover .svg-cart,
+.user-navigation__item-link:focus .svg-search,
+.user-navigation__item-link:focus .svg-enter,
+.user-navigation__item-link:focus .svg-cart {
   fill: #000;
 }
 .user-navigation__search-form {
@@ -225,6 +235,7 @@ input[type="radio"].visually-hidden {
   box-shadow: none;
   font-size: 14px;
   border: 1px solid rgb(211, 211, 210);
+  padding-left: 15px;
 }
 .search-opener:hover .user-navigation__search-form,
 .search-opener_link:focus ~ .user-navigation__search-form {
@@ -565,6 +576,7 @@ input[type="radio"].visually-hidden {
 }
 .subscribe-block__input {
   display: inline-block;
+  vertical-align: baseline;
   box-sizing: border-box;
   margin-left: 22px;
   margin-top: 36px;
@@ -606,8 +618,10 @@ input[type="radio"].visually-hidden {
   margin-top: -3px;
   margin-bottom: 13px;
 }
+
 .social-block__button {
   display: block;
+  margin: 0 auto;
   width: 32px;
   height: 32px;
   fill: rgba(255, 255, 255, 0.8);
@@ -758,10 +772,13 @@ margin: 0 auto;
   width: 12px;
 }
 .user-navigation__cart-list-cell_col2 {
-  width: 50px;
+  width: 33px;
+  padding: 0 7px;
 }
 .user-navigation__cart-list-cell_col3 {
   width: 220px;
+  text-align: left;
+  padding-left: 5px;
 }
 .user-navigation__cart-list-cell_col4 {
   width: 60px;
@@ -1024,9 +1041,6 @@ margin: 0 auto;
 .catalog-search__fat-content-list li:last-child {
   margin-right: 15px;
 }
-.catalog-search__fat-content-list input {
-  display: none;
-}
 .catalog-search__fat-content-list label {
   position: relative;
   font-size: 16px;
@@ -1072,9 +1086,6 @@ margin: 0 auto;
   height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-}
-.catalog-search__fill-list input {
-  display: none;
 }
 .catalog-search__fill-list label {
   position: relative;
@@ -1340,11 +1351,10 @@ margin: 0 auto;
   min-height: 64px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 .user-navigation {
   margin-left: auto;
-  min-width: 260px;
-  justify-content: space-between;
 }
 .sub-navigation {
   display: flex;
@@ -1368,14 +1378,17 @@ margin: 0 auto;
   margin-top: 39px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .item-list__item {
   flex-basis: 267px;
   min-height: 362px;
+  margin-right: 26px;
+}
+.item-list__item:nth-child(4n) {
+  margin-right: 0;
 }
 .about-us {
-
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1457,7 +1470,7 @@ margin: 0 auto;
 }
 .item-list__item-link-container {
   margin: 0 auto;
-  width: 98%;
+  width: 96%;
 }
 /*************************** Сетка 2ая страница  ************************/
 
