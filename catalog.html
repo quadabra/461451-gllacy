@@ -17,7 +17,7 @@
         <li class="site-navigation__item catalog-opener">
           <a class="catalog-opener_link site-navigation__item-link page-current-link" href="#">Каталог</a>
           <ul class="site-navigation__submenu element-hidden">
-            <li class="site-navigation__submenu-item"><a href="#">Новинки</a></classb></li>
+            <li class="site-navigation__submenu-item"><a href="#">Новинки</a></li>
             <li class="site-navigation__submenu-item page-current-link"><a>Сливочное</a></li>
             <li class="site-navigation__submenu-item"><a href="#">Щербеты</a></li>
             <li class="site-navigation__submenu-item"><a href="#">Фруктовый лёд</a></li>
@@ -152,16 +152,19 @@
         </fieldset>
         <fieldset class="catalog-search__price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <div class="catalog-search__price-pointer"></div>
-          <input class="catalog-search__price-range" type="range" name="icecream-price" id="icecream-price" min="0"
-                 max="700" step="100" value="500">
-          <label class="visually-hidden" for="icecream-price">Диапазон цен</label>
+          <div class="catalog-search__price-range">
+            <div class="catalog-search__price-slide"></div>
+            <div class="catalog-search__price-pointer">
+              <div class="catalog-search__price-pointer_element"></div>
+              <div class="catalog-search__price-pointer_element"></div>
+            </div>
+          </div>
         </fieldset>
         <fieldset class="catalog-search__fat-content">
           <legend>Жирность:</legend>
           <ul class="catalog-search__fat-content-list selection-list">
             <li>
-              <input class="visually-hidden" type="radio" name="fat-content" id="fat0" value="fat0">
+              <input class="visually-hidden" type="radio" name="fat-content" id="fat0" value="fat0" disabled>
               <label for="fat0" tabindex="0">0%</label>
             </li>
             <li>
@@ -353,7 +356,8 @@
     </ul>
 
     <ul class="pagination container">
-      <li><a class="pagination__button_prev pagination__button_disabled"><span class="visually-hidden">Педыдущая страница</span></a>
+      <li><a class="pagination__button_prev pagination__button_disabled"><span
+        class="visually-hidden">Педыдущая страница</span></a>
       </li>
       <li><a class="pagination__button_number pagination__current-page">1</a></li>
       <li><a class="pagination__button_number" href="#">2</a></li>
