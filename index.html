@@ -47,11 +47,14 @@
               <span class="visually-hidden">Поиск</span></a>
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
-              <input type="search" name="localsearch" placeholder="Что ищем?" id="search-form">
-              <label class="visually-hidden" for="search-form">Что ищем?</label>
-              <button class="visually-hidden" type="submit">Искать</button>
+              <div>
+                <input type="search" name="localsearch" id="search-form">
+                <div class="label-container">
+                  <label class="label-as-placeholder" for="search-form">Что ищем?</label>
+                </div>
+                <button class="visually-hidden" type="submit">Искать</button>
+              </div>
             </form>
-
           </li>
           <li class="user-navigation__item login-opener">
             <a class="login-opener-link user-navigation__item-link" href="#">
@@ -64,10 +67,18 @@
               </svg>
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
-              <label class="visually-hidden" for="email-field">Электронная почта</label>
-              <input type="password" name="password" placeholder="Пароль" id="password-field" data-title="Пароль">
-              <label class="visually-hidden" for="password-field">Пароль</label>
+              <div>
+                <input type="email" name="email-login" id="email-field">
+                <div class="label-container">
+                  <label class="label-as-placeholder" for="email-field">Электронная почта</label>
+                </div>
+              </div>
+              <div>
+                <input type="password" name="password" id="password-field" data-title="Пароль">
+                <div class="label-container">
+                  <label class="label-as-placeholder" for="password-field">Пароль</label>
+                </div>
+              </div>
               <div class="user-navigation__login-form-container">
                 <button class="button-medium user-navigation__login-form-buttton" type="submit">Войти</button>
                 <div class="user-navigation__login-form-link-container">
@@ -209,9 +220,13 @@
               вкусного,
               что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <input class="subscribe-block__input" type="email" name="email-subscribe" placeholder="Электронная почта"
-                   id="subscribe-form">
-            <label class="visually-hidden" for="subscribe-form">Электронная почта</label>
+            <div class="subscribe-block__input-container">
+              <input class="subscribe-block__input" type="email" name="email-subscribe" id="subscribe-form">
+              <div class="label-container">
+                <label class="label-as-placeholder" for="subscribe-form">Электронная почта</label>
+              </div>
+
+            </div>
             <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
           </form>
         </section>
@@ -307,18 +322,28 @@
       </div>
     </div>
   </footer>
-
   <section class="modal1 modal-feedback">
     <h3 class="modal-title">Мы обязательно вам ответим!</h3>
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
-      <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
-      <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
-      <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
-      <textarea name="feedback-text" rows="7" cols="30" placeholder="Напишите что-нибудь..."
-                id="feedback-message"></textarea>
-      <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
+      <div>
+        <input type="text" name="feedback-name" id="feedback-name">
+        <div class="label-container">
+          <label class="label-as-placeholder" for="feedback-name">Как вас зовут?</label>
+        </div>
+      </div>
+      <div>
+        <input type="email" name="feedback-email" id="feedback-email">
+        <div class="label-container">
+          <label class="label-as-placeholder" for="feedback-email">Ваша почта для ответа?</label>
+        </div>
+      </div>
+      <div>
+        <textarea name="feedback-text" rows="7" cols="30" id="feedback-message"></textarea>
+        <div class="label-container">
+          <label class="textarea-placeholder" for="feedback-message">Напишите что-нибудь...</label>
+        </div>
+      </div>
       <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
     </form>
   </section>

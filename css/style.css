@@ -220,7 +220,8 @@ input[type="radio"].visually-hidden {
   right: 0;
   top: 37px;
   margin: 0;
-  padding: 0;
+  padding: 21px 16px;
+  box-sizing: border-box;
   min-width: 342px;
   min-height: 85px;
   background-color: rgb(248, 247, 244);
@@ -237,7 +238,7 @@ input[type="radio"].visually-hidden {
 }
 .user-navigation__search-form input {
   display: block;
-  margin: 21px auto;
+  margin: 0 auto;
   height: 42px;
   width: 310px;
   box-sizing: border-box;
@@ -584,7 +585,7 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
 }
 .subscribe-block__text {
-  margin: 28px 10px 0 22px;
+  margin: 28px 10px 0 0;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
@@ -596,13 +597,14 @@ input[type="radio"].visually-hidden {
   margin: 5px auto;
   width: 550px;
   height: 210px;
+  box-sizing: border-box;
+  padding-left: 22px;
 }
 .subscribe-block__input {
   display: inline-block;
   vertical-align: baseline;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin-left: 22px;
   margin-top: 36px;
   padding-left: 15px;
   width: 368px;
@@ -1299,7 +1301,7 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.04em;
 }
 .subscribe-block__button {
-  margin-left: 7px;
+  margin-left: 6px;
   display: inline-block;
   vertical-align: middle;
   width: 129px;
@@ -1626,6 +1628,9 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   width: 96%;
 }
+.subscribe-block__input-container {
+  display: inline-block;
+}
 /*************************** Сетка 2ая страница  ************************/
 
 .catalog-search {
@@ -1667,6 +1672,10 @@ input[type="radio"].visually-hidden {
 .modal-feedback__feedback-form input,
 .modal-feedback__feedback-form textarea {
   outline: none;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  color: rgb(50, 50, 50);
 }
 .user-navigation__search-form input:hover,
 .user-navigation__login-form input:hover,
@@ -1688,11 +1697,50 @@ input[type="radio"].visually-hidden {
 .modal-feedback__feedback-form textarea:focus {
   padding-top: 14px;
 }
-.user-navigation__search-form input:focus::placeholder,
-.user-navigation__login-form input:focus::placeholder,
-.subscribe-block__form input:focus::placeholder,
-.modal-feedback__feedback-form input:focus::placeholder,
-.modal-feedback__feedback-form textarea:focus::placeholder {
-  opacity: 0;
+.label-container {
+  position: relative;
+}
+.label-as-placeholder {
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  color: rgb(153, 153, 153);
+  font-size: 16px;
+  line-height: 24px;
+  pointer-events: none;
   transition-duration: 0.2s;
+}
+.user-navigation__search-form input:focus ~ .label-container .label-as-placeholder,
+.user-navigation__login-form input:focus ~ .label-container .label-as-placeholder,
+.subscribe-block__form input:focus ~ .label-container .label-as-placeholder,
+.modal-feedback__feedback-form input:focus ~ .label-container .label-as-placeholder {
+  font-size: 11px;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  transform: translateY(-22px);
+}
+.textarea-placeholder {
+  position: absolute;
+  top: -150px;
+  left: 15px;
+  color: rgb(153, 153, 153);
+  font-size: 16px;
+  line-height: 24px;
+  pointer-events: none;
+  transition-duration: 0.2s;
+}
+.modal-feedback__feedback-form textarea:focus ~ .label-container .textarea-placeholder {
+  font-size: 11px;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  transform: translateY(-22px);
+}
+.label-as-placeholder_active {
+  position: absolute;
+  top: -57px;
+  left: 15px;
+  color: rgb(153, 153, 153);
+  pointer-events: none;
+  font-size: 11px;
+  line-height: 13px;
 }

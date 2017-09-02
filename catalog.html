@@ -36,9 +36,13 @@
           <span class="visually-hidden">Поиск</span></a>
 
           <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="localsearch" placeholder="Что ищем?" id="search-form">
-            <label class="visually-hidden" for="search-form">Что ищем?</label>
-            <button class="visually-hidden" type="submit">Искать</button>
+            <div>
+              <input type="search" name="localsearch" id="search-form">
+              <div class="label-container">
+                <label class="label-as-placeholder" for="search-form">Что ищем?</label>
+              </div>
+              <button class="visually-hidden" type="submit">Искать</button>
+            </div>
           </form>
         </li>
         <li class="user-navigation__item login-opener">
@@ -52,10 +56,18 @@
             </svg>
             Вход</a>
           <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
-            <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
-            <label class="visually-hidden" for="email-field">Электронная почта</label>
-            <input type="password" name="password" placeholder="Пароль" id="password-field">
-            <label class="visually-hidden" for="password-field">Пароль</label>
+            <div>
+              <input type="email" name="email-login" id="email-field">
+              <div class="label-container">
+                <label class="label-as-placeholder" for="email-field">Электронная почта</label>
+              </div>
+            </div>
+            <div>
+              <input type="password" name="password" id="password-field" data-title="Пароль">
+              <div class="label-container">
+                <label class="label-as-placeholder" for="password-field">Пароль</label>
+              </div>
+            </div>
             <div class="user-navigation__login-form-container">
               <button class="button-medium user-navigation__login-form-buttton" type="submit">Войти</button>
               <div class="user-navigation__login-form-link-container">
