@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="script" href="js/script.js">
   <title>HTML Academy: Глейси</title>
 </head>
 <body class="index-page">
@@ -47,9 +48,8 @@
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
               <input type="search" name="localsearch" placeholder="Что ищем?" id="search-form">
-              <label class="visually-hidden" for="search-form">Введите поисковый запрос</label>
-              <input class="visually-hidden" type="submit" id="search-start">
-              <label class="visually-hidden" for="search-start">Искать</label>
+              <label class="visually-hidden" for="search-form">Что ищем?</label>
+              <button class="visually-hidden" type="submit">Искать</button>
             </form>
 
           </li>
@@ -65,8 +65,8 @@
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email-login" placeholder="Электронная почта" id="email-field">
-              <label class="visually-hidden" for="email-field">Введите адрес электронной почты</label>
-              <input type="password" name="password" placeholder="Пароль" id="password-field">
+              <label class="visually-hidden" for="email-field">Электронная почта</label>
+              <input type="password" name="password" placeholder="Пароль" id="password-field" data-title="Пароль">
               <label class="visually-hidden" for="password-field">Пароль</label>
               <div class="user-navigation__login-form-container">
                 <button class="button-medium user-navigation__login-form-buttton" type="submit">Войти</button>
@@ -211,7 +211,7 @@
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <input class="subscribe-block__input" type="email" name="email-subscribe" placeholder="Электронная почта"
                    id="subscribe-form">
-            <label class="visually-hidden" for="subscribe-form">Введите адрес электронной почты</label>
+            <label class="visually-hidden" for="subscribe-form">Электронная почта</label>
             <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
           </form>
         </section>
@@ -313,12 +313,12 @@
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" name="feedback-name" placeholder="Как вас зовут?" id="feedback-name">
-      <label class="visually-hidden" for="feedback-name">Представьтесь пожалуйста</label>
+      <label class="visually-hidden" for="feedback-name">Как вас зовут?</label>
       <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" id="feedback-email">
-      <label class="visually-hidden" for="feedback-email">Введите адрес электронной почты</label>
+      <label class="visually-hidden" for="feedback-email">Ваша почта для ответа?</label>
       <textarea name="feedback-text" rows="7" cols="30" placeholder="Напишите что-нибудь..."
                 id="feedback-message"></textarea>
-      <label class="visually-hidden" for="feedback-message">Введите текст сообщения</label>
+      <label class="visually-hidden" for="feedback-message">Напишите что-нибудь...</label>
       <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
     </form>
   </section>

@@ -127,6 +127,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   top: 37px;
+  left: -5px;
   min-width: 143px;
   min-height: 171px;
   background-color: #f8f7f4;
@@ -234,7 +235,7 @@ input[type="radio"].visually-hidden {
   height: 7px;
   top: -7px;
 }
-.user-navigation__search-form input[type=search] {
+.user-navigation__search-form input {
   display: block;
   margin: 21px auto;
   height: 42px;
@@ -245,7 +246,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 14px;
-  border: 1px solid rgb(211, 211, 210);
+  border: 1px solid rgba(178, 178, 178, 0.5);
   padding-left: 15px;
 }
 .search-opener:hover .user-navigation__search-form,
@@ -284,7 +285,7 @@ input[type="radio"].visually-hidden {
   height: 44px;
   border-radius: 5px;
   font-size: 14px;
-  border: 1px solid rgb(211, 211, 210);;
+  border: 1px solid rgba(178, 178, 178, 0.5);
 }
 .user-navigation__login-form-link-container {
   margin: 0;
@@ -364,7 +365,7 @@ input[type="radio"].visually-hidden {
   background-color: rgb(248, 247, 244);
 }
 .slider-block__special-offer_text {
-  margin: auto auto 0;
+  margin: 315px auto 0; /** костыль для IE */
   font-size: 60px;
   font-weight: bold;
   line-height: 60px;
@@ -429,10 +430,8 @@ input[type="radio"].visually-hidden {
   border-radius: 15px;
   min-height: 230px;
 }
-
 .item-list {
   list-style: none;
-  display: block;
 }
 .item-list__item {
   position: relative;
@@ -452,12 +451,9 @@ input[type="radio"].visually-hidden {
   display: none;
   position: absolute;
   top:-6px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 293px;
-  height: 405px;
+  bottom: -83px;
+  left: -12px;
+  right: -12px;
   background-color: rgba(248, 247, 244, 0.2);
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -485,7 +481,7 @@ input[type="radio"].visually-hidden {
 .item-list__item-price {
   display: block;
   position: absolute;
-  top: 210px;
+  top: 208px;
   left: 0;
   font-size: 45px;
   line-height: 45px;
@@ -498,9 +494,8 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
 }
 .item-list__item-price svg {
-
   position: relative;
-  bottom: -3px;
+  bottom: -5px;
   left: 3px;
   margin: 0;
   padding: 0;
@@ -612,6 +607,8 @@ input[type="radio"].visually-hidden {
   padding-left: 12px;
   width: 368px;
   height: 44px;
+  border: 1px solid rgba(178, 178, 178, 0.5);
+  border-radius: 5px;
 }
 .map-block {
   width: 1200px;
@@ -712,14 +709,16 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 /******************************* Modal Window*********************/
-.modal {
-  margin: 0 auto;
-}
+
 .modal-feedback {
-  width: 447px;
+  width: 477px;
   height: 442px;
   padding: 20px 25px 27px;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -220px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #f8f7f4;
@@ -734,6 +733,10 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  z-index: 10;
+}
+.modal {
+  display: none;
 }
 .modal-title {
   font-size: 24px;
@@ -770,10 +773,13 @@ input[type="radio"].visually-hidden {
   color: #999999;
 }
 .modal-feedback__feedback-form textarea {
+  width: 428px;
+  height: 155px;
   border: 1px solid rgba(178, 178, 178, 0.5);
   border-radius: 5px;
   padding-left: 15px;
   padding-top: 15px;
+  box-sizing: border-box;
 }
 .modal-feedback__send-button {
   -ms-flex-item-align: end;
@@ -1469,6 +1475,9 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: start;
@@ -1478,8 +1487,9 @@ input[type="radio"].visually-hidden {
 .item-list__item {
   -ms-flex-preferred-size: 267px;
   flex-basis: 267px;
-  min-height: 362px;
+  min-height: 322px;
   margin-right: 26px;
+  margin-bottom: 39px;
 }
 .item-list__item:nth-child(4n) {
   margin-right: 0;
@@ -1648,4 +1658,35 @@ input[type="radio"].visually-hidden {
   -ms-flex-pack: end;
   justify-content: flex-end;
   list-style: none;
+}
+/********************************** Инпуты *****************************/
+
+.user-navigation__search-form input,
+.user-navigation__login-form input,
+.subscribe-block__form input,
+.modal-feedback__feedback-form input,
+.modal-feedback__feedback-form textarea {
+  outline: none;
+}
+.user-navigation__search-form input:hover,
+.user-navigation__login-form input:hover,
+.subscribe-block__form input:hover,
+.modal-feedback__feedback-form input:hover,
+.modal-feedback__feedback-form textarea:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+}
+.user-navigation__search-form input:focus,
+.user-navigation__login-form input:focus,
+.subscribe-block__form input:focus,
+.modal-feedback__feedback-form input:focus,
+.modal-feedback__feedback-form textarea:focus{
+  border: 2px solid rgba(46, 136, 228, 0.5);
+}
+.user-navigation__search-form input:focus::placeholder,
+.user-navigation__login-form input:focus::placeholder,
+.subscribe-block__form input:focus::placeholder,
+.modal-feedback__feedback-form input:focus::placeholder,
+.modal-feedback__feedback-form textarea:focus::placeholder {
+  opacity: 0;
+  transition-duration: 0.2s;
 }
