@@ -1744,3 +1744,12 @@ input[type="radio"].visually-hidden {
   font-size: 11px;
   line-height: 13px;
 }
+.textarea-placeholder_active {
+  position: absolute;
+  top: -172px;
+  left: 15px;
+  font-size: 11px;
+  line-height: 13px;
+  color: rgb(91, 157, 223);
+  pointer-events: none;
+}
