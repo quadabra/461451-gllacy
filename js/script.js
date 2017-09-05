@@ -7,10 +7,12 @@ var modaltext = modalwindow.querySelector('[name=feedback-text]');
 var modalform = modalwindow.querySelector('form');
 var storagemodalemail = localStorage.getItem('feedback-email');
 var storagemodalname = localStorage.getItem('feedback-name');
-var storagelogin = localStorage.getItem('login')
-var login = document.querySelector('[name=email-login');
-var textinput = document.querySelectorAll('.text-input');
-var labelplaceholder = document.querySelectorAll('.label-as-placeholder');
+var storagelogin = localStorage.getItem('login');
+var login = document.querySelector('[name=email-login]');
+var textfield = modalwindow.querySelector('.textarea-input');
+var textlabel = modalwindow.querySelector('.textarea-placeholder');
+var textinput = document.getElementsByClassName('text-input');
+var labelplaceholder = document.getElementsByClassName('label-as-placeholder');
 
 modallink.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -45,9 +47,21 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
-
-for (var i = 1; i < textinput.length; i++ ) {
-  if (textinput.value) {
-    labelplaceholder[i].classList.add('label-as-placeholder_active');
-  }
+textfield.addEventListener('blur', function () {
+if (textfield.value) {
+  textlabel.classList.add('textarea-placeholder_active');
+} else {
+  textlabel.classList.remove('textarea-placeholder_active');
+}
+});
+var i = 0;
+while (i < textinput.length) {
+  textinput.addEventListener('blur', function () {
+    if (textinput[i].value) {
+      labelplaceholder[i].classList.add('label-as-placeholder_active');
+    } else {
+      labelplaceholder[i].classList.remove('label-as-placeholder_active');
+    }
+  });
+  i++;
 }

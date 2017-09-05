@@ -1730,7 +1730,7 @@ input[type="radio"].visually-hidden {
 }
 .textarea-placeholder {
   position: absolute;
-  top: -150px;
+  top: -145px;
   left: 15px;
   color: rgb(153, 153, 153);
   font-size: 16px;
@@ -1742,25 +1742,19 @@ input[type="radio"].visually-hidden {
   font-size: 11px;
   line-height: 13px;
   color: rgb(91, 157, 223);
-  transform: translateY(-22px);
+  transform: translateY(-27px);
 }
 .label-as-placeholder_active {
-  position: absolute;
-  top: -57px;
-  left: 15px;
   color: rgb(153, 153, 153);
-  pointer-events: none;
   font-size: 11px;
   line-height: 13px;
+  transform: translateY(-22px);
 }
 .textarea-placeholder_active {
-  position: absolute;
-  top: -172px;
-  left: 15px;
+  color: rgb(153, 153, 153);
+  transform: translateY(-27px);
   font-size: 11px;
   line-height: 13px;
-  color: rgb(91, 157, 223);
-  pointer-events: none;
 }
 @keyframes modal-in {
   0% {transform: translateX(3000px) skewX(45deg);}
