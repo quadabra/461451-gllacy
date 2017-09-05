@@ -47,7 +47,7 @@
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
               <div>
-                <input type="search" name="localsearch" id="search-form">
+                <input class="text-input" type="search" name="localsearch" id="search-form">
                 <div class="label-container">
                   <label class="label-as-placeholder" for="search-form">Что ищем?</label>
                 </div>
@@ -67,13 +67,13 @@
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
               <div>
-                <input type="email" name="email-login" id="email-field">
+                <input class="text-input" type="email" name="email-login" id="email-field">
                 <div class="label-container">
                   <label class="label-as-placeholder" for="email-field">Электронная почта</label>
                 </div>
               </div>
               <div>
-                <input type="password" name="password" id="password-field" data-title="Пароль">
+                <input class="text-input" type="password" name="password" id="password-field" data-title="Пароль">
                 <div class="label-container">
                   <label class="label-as-placeholder" for="password-field">Пароль</label>
                 </div>
@@ -97,7 +97,7 @@
                   <circle cx="15.984" cy="18" r="2"/>
                 </g>
               </svg>
-              Пусто</a>
+              &nbsp;Пусто</a>
           </li>
         </ul>
       </nav>
@@ -223,7 +223,7 @@
               что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <div class="subscribe-block__input-container">
-              <input class="subscribe-block__input" type="email" name="email-subscribe" id="subscribe-form">
+              <input class="subscribe-block__input text-input" type="email" name="email-subscribe" id="subscribe-form" required>
               <div class="label-container">
                 <label class="label-as-placeholder" for="subscribe-form">Электронная почта</label>
               </div>
@@ -329,19 +329,19 @@
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div>
-        <input type="text" name="feedback-name" id="feedback-name">
+        <input class="text-input" type="text" name="feedback-name" id="feedback-name">
         <div class="label-container">
           <label class="label-as-placeholder" for="feedback-name">Как вас зовут?</label>
         </div>
       </div>
       <div>
-        <input type="email" name="feedback-email" id="feedback-email">
+        <input class="text-input" type="email" name="feedback-email" id="feedback-email">
         <div class="label-container">
           <label class="label-as-placeholder" for="feedback-email">Ваша почта для ответа?</label>
         </div>
       </div>
       <div>
-        <textarea name="feedback-text" rows="7" cols="30" id="feedback-message"></textarea>
+        <textarea class="textarea-input" name="feedback-text" rows="7" cols="30" id="feedback-message"></textarea>
         <div class="label-container">
           <label class="textarea-placeholder" for="feedback-message">Напишите что-нибудь...</label>
         </div>
@@ -350,6 +350,6 @@
     </form>
   </section>
 </div>
-<script src="js/script1.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

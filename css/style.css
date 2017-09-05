@@ -658,6 +658,8 @@ input[type="radio"].visually-hidden {
 }
 .social-block__button svg {
   border-radius: 50%;
+  -ms-transform: translate(0.03em, 0.02em);
+  -moz-transform: translateX(0.01em);
   margin: 0;
   padding: 0;
 }
@@ -790,6 +792,12 @@ input[type="radio"].visually-hidden {
 .modal-feedback__send-button {
   -ms-flex-item-align: end;
   align-self: flex-end;
+}
+.modal-open {
+  display: flex;
+  animation-name: modal-in;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
 /******************************* Вторая страница ***********************/
 .catalog-page {
@@ -1754,4 +1762,19 @@ input[type="radio"].visually-hidden {
   color: rgb(91, 157, 223);
   pointer-events: none;
 }
-
+@keyframes modal-in {
+  0% {transform: translateX(3000px) skewX(45deg);}
+  50% {transform: translateX(0) skewX(10deg);}
+  70% {transform: translateX(-75%) skewX(-10deg);}
+  85% {transform: translateX(-35%) skewX(5deg);}
+  100% {transform: translateX(-50%) skewX(0);}
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(-50%); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-55%); }
+  20%, 40%, 60%, 80% { transform: translateX(-45%); }
+}
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.45s;
+}
