@@ -52,14 +52,3 @@ textfield.addEventListener('blur', function () {
     textlabel.classList.remove('textarea-placeholder_active');
   }
 });
-
-for (var i = 0; i < textinput.length; i++) {
-  textinput[i].addEventListener('blur', function () {
-    if (textinput[i].value) {
-      labelplaceholder[i].classList.add('label-as-placeholder_active');
-    }
-    else {
-      labelplaceholder[i].classList.remove('label-as-placeholder_active');
-    }
-  });
-}

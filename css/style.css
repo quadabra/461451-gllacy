@@ -1760,12 +1760,6 @@ input[type="radio"].visually-hidden {
   color: rgb(91, 157, 223);
   transform: translateY(-27px);
 }
-.label-as-placeholder_active {
-  color: rgb(153, 153, 153);
-  font-size: 11px;
-  line-height: 13px;
-  transform: translateY(-22px);
-}
 .textarea-placeholder_active {
   color: rgb(153, 153, 153);
   transform: translateY(-27px);
