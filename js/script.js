@@ -9,7 +9,7 @@ var storagemodalemail = localStorage.getItem('feedback-email');
 var storagemodalname = localStorage.getItem('feedback-name');
 var textlabel = modalwindow.querySelector('.textarea-placeholder');
 var modallabelname = modalwindow.querySelector('.modal__label_name');
-var modallabelmail = modalwindow.querySelector('modal__label_mail');
+var modallabelmail = modalwindow.querySelector('.modal__label_mail');
 
 modallink.addEventListener('click', function (evt) {
   evt.preventDefault();
