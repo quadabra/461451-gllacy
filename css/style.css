@@ -1772,7 +1772,7 @@ input[type="radio"].visually-hidden {
   font-size: 11px;
   line-height: 13px;
 }
-.text-input:valid ~ .label-as-placeholder {
+.text-input:valid ~ .label-container .label-as-placeholder {
   color: rgb(153, 153, 153);
   font-size: 11px;
   line-height: 13px;
