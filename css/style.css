@@ -799,6 +799,22 @@ input[type="radio"].visually-hidden {
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
 }
+@keyframes modal-in {
+  0% {transform: translateX(3000px) skewX(45deg);}
+  50% {transform: translateX(0) skewX(10deg);}
+  70% {transform: translateX(-75%) skewX(-10deg);}
+  85% {transform: translateX(-35%) skewX(5deg);}
+  100% {transform: translateX(-50%) skewX(0);}
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(-50%); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-55%); }
+  20%, 40%, 60%, 80% { transform: translateX(-45%); }
+}
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.45s;
+}
 /******************************* Вторая страница ***********************/
 .catalog-page {
   background-color: #849d8f;
@@ -1756,19 +1772,9 @@ input[type="radio"].visually-hidden {
   font-size: 11px;
   line-height: 13px;
 }
-@keyframes modal-in {
-  0% {transform: translateX(3000px) skewX(45deg);}
-  50% {transform: translateX(0) skewX(10deg);}
-  70% {transform: translateX(-75%) skewX(-10deg);}
-  85% {transform: translateX(-35%) skewX(5deg);}
-  100% {transform: translateX(-50%) skewX(0);}
-}
-@keyframes shake {
-  0%, 100% { transform: translateX(-50%); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-55%); }
-  20%, 40%, 60%, 80% { transform: translateX(-45%); }
-}
-.modal-error {
-  animation-name: shake;
-  animation-duration: 0.45s;
+.text-input:valid ~ .label-as-placeholder {
+  color: rgb(153, 153, 153);
+  font-size: 11px;
+  line-height: 13px;
+  transform: translateY(-22px);
 }

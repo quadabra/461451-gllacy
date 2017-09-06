@@ -48,20 +48,20 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 textfield.addEventListener('blur', function () {
-if (textfield.value) {
-  textlabel.classList.add('textarea-placeholder_active');
-} else {
-  textlabel.classList.remove('textarea-placeholder_active');
-}
+  if (textfield.value) {
+    textlabel.classList.add('textarea-placeholder_active');
+  } else {
+    textlabel.classList.remove('textarea-placeholder_active');
+  }
 });
-var i = 0;
-while (i < textinput.length) {
-  textinput.addEventListener('blur', function () {
+
+for (var i = 0; i < textinput.length; i++) {
+  textinput[i].addEventListener('blur', function () {
     if (textinput[i].value) {
       labelplaceholder[i].classList.add('label-as-placeholder_active');
-    } else {
+    }
+    else {
       labelplaceholder[i].classList.remove('label-as-placeholder_active');
     }
   });
-  i++;
 }
