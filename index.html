@@ -47,9 +47,9 @@
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
               <div>
-                <input class="text-input" type="text" name="localsearch" id="search-form">
+                <input class="text-input" type="text" name="localsearch" id="search-form" required>
                 <div class="label-container">
-                  <label class="label-as-placeholder" for="search-form">Что ищем?</label>
+                  <label class="label-as-placeholder text-input" for="search-form">Что ищем?</label>
                 </div>
                 <button class="visually-hidden" type="submit">Искать</button>
               </div>
@@ -67,13 +67,13 @@
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
               <div>
-                <input class="text-input" type="text" name="email-login" id="email-field">
+                <input class="text-input" type="text" name="email-login" id="email-field" required>
                 <div class="label-container">
                   <label class="label-as-placeholder" for="email-field">Электронная почта</label>
                 </div>
               </div>
               <div>
-                <input class="text-input" type="password" name="password" id="password-field" data-title="Пароль">
+                <input class="text-input" type="password" name="password" id="password-field" data-title="Пароль" required>
                 <div class="label-container">
                   <label class="label-as-placeholder" for="password-field">Пароль</label>
                 </div>
@@ -329,15 +329,15 @@
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div>
-        <input class="text-input" type="text" name="feedback-name" id="feedback-name">
+        <input type="text" name="feedback-name" id="feedback-name">
         <div class="label-container">
-          <label class="label-as-placeholder" for="feedback-name">Как вас зовут?</label>
+          <label class="label-as-placeholder modal__label_name" for="feedback-name">Как вас зовут?</label>
         </div>
       </div>
       <div>
-        <input class="text-input" type="text" name="feedback-email" id="feedback-email">
+        <input type="text" name="feedback-email" id="feedback-email">
         <div class="label-container">
-          <label class="label-as-placeholder" for="feedback-email">Ваша почта для ответа?</label>
+          <label class="label-as-placeholder modal__label_mail" for="feedback-email">Ваша почта для ответа?</label>
         </div>
       </div>
       <div>

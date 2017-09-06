@@ -7,10 +7,9 @@ var modaltext = modalwindow.querySelector('[name=feedback-text]');
 var modalform = modalwindow.querySelector('form');
 var storagemodalemail = localStorage.getItem('feedback-email');
 var storagemodalname = localStorage.getItem('feedback-name');
-var textfield = modalwindow.querySelector('.textarea-input');
 var textlabel = modalwindow.querySelector('.textarea-placeholder');
-var textinput = document.getElementsByClassName('text-input');
-var labelplaceholder = document.getElementsByClassName('label-as-placeholder');
+var modallabelname = modalwindow.querySelector('.modal__label_name');
+var modallabelmail = modalwindow.querySelector('modal__label_mail');
 
 modallink.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -45,10 +44,24 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
-textfield.addEventListener('blur', function () {
-  if (textfield.value) {
+modaltext.addEventListener('blur', function () {
+  if (modaltext.value) {
     textlabel.classList.add('textarea-placeholder_active');
   } else {
     textlabel.classList.remove('textarea-placeholder_active');
+  }
+});
+modalname.addEventListener('blur', function () {
+  if (modalname.value) {
+    modallabelname.classList.add('text-input_active');
+  } else {
+    modallabelname.classList.remove('text-input_active');
+  }
+});
+modalemail.addEventListener('blur', function () {
+  if (modalemail.value) {
+    modallabelmail.classList.add('text-input_active');
+  } else {
+    modallabelmail.classList.remove('text-input_active');
   }
 });
