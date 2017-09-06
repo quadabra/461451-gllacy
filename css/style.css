@@ -1778,3 +1778,9 @@ input[type="radio"].visually-hidden {
   line-height: 13px;
   transform: translateY(-22px);
 }
+.text-input:invalid ~ .label-container .label-as-placeholder {
+  color: rgb(153, 153, 153);
+  font-size: 11px;
+  line-height: 13px;
+  transform: translateY(-22px);
+}

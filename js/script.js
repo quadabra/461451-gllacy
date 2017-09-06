@@ -7,8 +7,6 @@ var modaltext = modalwindow.querySelector('[name=feedback-text]');
 var modalform = modalwindow.querySelector('form');
 var storagemodalemail = localStorage.getItem('feedback-email');
 var storagemodalname = localStorage.getItem('feedback-name');
-var storagelogin = localStorage.getItem('login');
-var login = document.querySelector('[name=email-login]');
 var textfield = modalwindow.querySelector('.textarea-input');
 var textlabel = modalwindow.querySelector('.textarea-placeholder');
 var textinput = document.getElementsByClassName('text-input');
