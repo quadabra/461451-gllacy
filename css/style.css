@@ -623,6 +623,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
 }
 .map-interactive {
+  width: 100%;
   border: none;
 }
 .address-block {
