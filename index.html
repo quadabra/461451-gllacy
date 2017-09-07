@@ -19,7 +19,7 @@
           <img src="img/Logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation__item catalog-opener">
+          <li class="site-navigation__item catalog-opener" tabindex="0">
             <a class="site-navigation__item-link catalog-opener_link" href="#">Каталог</a>
             <ul class="site-navigation__submenu element-hidden">
               <li class="site-navigation__submenu-item"><a href="#">Новинки</a></li>
@@ -47,7 +47,7 @@
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
               <div>
-                <input class="text-input" type="search" name="localsearch" id="search-form" required>
+                <input class="text-input text-input-indicator" type="search" name="localsearch" id="search-form" required>
                 <div class="label-container">
                   <label class="label-as-placeholder text-input" for="search-form">Что ищем?</label>
                 </div>
@@ -67,13 +67,13 @@
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
               <div>
-                <input class="text-input" type="text" name="email-login" id="email-field" required>
+                <input class="text-input text-input-indicator" type="text" name="email-login" id="email-field" required>
                 <div class="label-container">
                   <label class="label-as-placeholder" for="email-field">Электронная почта</label>
                 </div>
               </div>
               <div>
-                <input class="text-input" type="password" name="password" id="password-field" data-title="Пароль"
+                <input class="text-input text-input-indicator" type="password" name="password" id="password-field" data-title="Пароль"
                        required>
                 <div class="label-container">
                   <label class="label-as-placeholder" for="password-field">Пароль</label>
@@ -114,9 +114,9 @@
       <section class="slider-block container">
         <h2 class="visually-hidden">Реклама</h2>
         <div class="slider-block__labels">
-          <label class="slider-button__label label-first" for="first-slide"></label>
-          <label class="slider-button__label label-second" for="second-slide"></label>
-          <label class="slider-button__label label-third" for="third-slide"></label>
+          <label class="slider-button__label label-first" for="first-slide" tabindex="0"><h3 class="visually-hidden">Описание слайда</h3></label>
+          <label class="slider-button__label label-second" for="second-slide" tabindex="0"><h3 class="visually-hidden">Описание слайда</h3></label>
+          <label class="slider-button__label label-third" for="third-slide" tabindex="0"><h3 class="visually-hidden">Описание слайда</h3></label>
         </div>
         <p class="slider-block__special-offer_text slider-first">Крем-брюле и пломбир с малиновым джемом</p>
         <p class="slider-block__special-offer_text slider-second">Шоколадный пломбир и лимонный сорбет</p>
@@ -127,15 +127,15 @@
       <article class="promo-block container">
         <h2 class="visually-hidden">Специальное предложение</h2>
         <section class="promo-element element-berry">  <!-- какой из вариантов классов оставлять? -->
-          <h3 class="promo-element_title">Малинка даром!</h3>
-          <p class="promo-element_text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
+          <h3 class="promo-element__title">Малинка даром!</h3>
+          <p class="promo-element__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку
             малинового
             варенья бесплатно.</p>
           <a href="#" class="promo-element__button_berry button-medium">Хочу варенье!</a>
         </section>
         <section class="promo-element element-chocolate">
-          <h3 class="promo-element_title">Шоколадки даром!</h3>
-          <p class="promo-element_text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+          <h3 class="promo-element__title">Шоколадки даром!</h3>
+          <p class="promo-element__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
             шоколадной присыпки
             совершенно бесплатно.</p>
           <a href="#" class="promo-element__button_choco button-medium">Хочу шоколадки!</a>
@@ -225,12 +225,11 @@
               что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <div class="subscribe-block__input-container">
-              <input class="subscribe-block__input text-input" type="text" name="email-subscribe" id="subscribe-form"
+              <input class="subscribe-block__input text-input text-input-indicator" type="text" name="email-subscribe" id="subscribe-form"
                      required>
               <div class="label-container">
                 <label class="label-as-placeholder" for="subscribe-form">Электронная почта</label>
               </div>
-
             </div>
             <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
           </form>
@@ -238,16 +237,16 @@
       </article>
       <section class="map-block">
         <h2 class="visually-hidden">Схема проезда и адрес магазина.</h2>
-        <iframe
+        <iframe class="map-interactive"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6000760813474!2d30.32536854100332!3d59.938778058850936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503953201293"
-          width="1200" height="430" allowfullscreen></iframe>
+          width="100%" height="430" allowfullscreen></iframe>
         <div class="address-block">
           <p class="address-block__about address-block__text_short">Адрес главного офиса и офлайн магазина:</p>
           <p class="address-block__text address-block__text_address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
           <p class="address-block__about">Для заказов по телефону:</p>
           <a class="address-block__text" href="tel:+78124502525">8 812 450-25-25</a>
           <p class="address-block__about">(с 10 до 20 ежедневно)</p>
-          <a class="address-block__button button-medium" href="#">Форма обратной связи</a>
+          <a class="address-block__button button-medium" href="feedback.html">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -332,13 +331,13 @@
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <div>
-        <input type="text" name="feedback-name" id="feedback-name">
+        <input class="text-input-indicator" type="text" name="feedback-name" id="feedback-name">
         <div class="label-container">
           <label class="label-as-placeholder modal__label_name" for="feedback-name">Как вас зовут?</label>
         </div>
       </div>
       <div>
-        <input type="email" name="feedback-email" id="feedback-email">
+        <input class="text-input-indicator" type="email" name="feedback-email" id="feedback-email">
         <div class="label-container">
           <label class="label-as-placeholder modal__label_mail" for="feedback-email">Ваша почта для ответа?</label>
         </div>
