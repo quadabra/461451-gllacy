@@ -46,11 +46,10 @@
               <span class="visually-hidden">Поиск</span></a>
 
             <form class="user-navigation__search-form element-hidden" action="https://echo.htmlacademy.ru" method="get">
-              <div>
-                <input class="text-input text-input-indicator" type="search" name="localsearch" id="search-form" required>
-                <div class="label-container">
-                  <label class="label-as-placeholder text-input" for="search-form">Что ищем?</label>
-                </div>
+              <div class="label-container">
+                <input class="text-input text-input-indicator" type="search" name="localsearch" id="search-form"
+                       required>
+                <label class="label-as-placeholder text-input" for="search-form">Что ищем?</label>
                 <button class="visually-hidden" type="submit">Искать</button>
               </div>
             </form>
@@ -66,18 +65,15 @@
               </svg>
               Вход</a>
             <form class="user-navigation__login-form element-hidden" action="https://echo.htmlacademy.ru" method="post">
-              <div>
+              <div class="label-container">
                 <input class="text-input text-input-indicator" type="text" name="email-login" id="email-field" required>
-                <div class="label-container">
-                  <label class="label-as-placeholder" for="email-field">Электронная почта</label>
-                </div>
+                <label class="label-as-placeholder" for="email-field">Электронная почта</label>
               </div>
-              <div>
-                <input class="text-input text-input-indicator" type="password" name="password" id="password-field" data-title="Пароль"
+              <div class="label-container">
+                <input class="text-input text-input-indicator" type="password" name="password" id="password-field"
+                       data-title="Пароль"
                        required>
-                <div class="label-container">
-                  <label class="label-as-placeholder" for="password-field">Пароль</label>
-                </div>
+                <label class="label-as-placeholder" for="password-field">Пароль</label>
               </div>
               <div class="user-navigation__login-form-container">
                 <button class="button-medium user-navigation__login-form-buttton" type="submit">Войти</button>
@@ -115,7 +111,8 @@
         <h2 class="visually-hidden">Реклама</h2>
         <div class="slider-block__labels">
           <label class="slider-button__label label-first" for="first-slide" tabindex="0"><span class="visually-hidden">Описание слайда</span></label>
-          <label class="slider-button__label label-second" for="second-slide" tabindex="0"><span class="visually-hidden">Описание слайда</span></label>
+          <label class="slider-button__label label-second" for="second-slide" tabindex="0"><span
+            class="visually-hidden">Описание слайда</span></label>
           <label class="slider-button__label label-third" for="third-slide" tabindex="0"><span class="visually-hidden">Описание слайда</span></label>
         </div>
         <p class="slider-block__special-offer_text slider-first">Крем-брюле и пломбир с малиновым джемом</p>
@@ -224,22 +221,21 @@
               вкусного,
               что у нас происходит.
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <div class="subscribe-block__input-container">
-              <input class="subscribe-block__input text-input text-input-indicator" type="text" name="email-subscribe" id="subscribe-form"
+            <div class="subscribe-block__input-container label-container">
+              <input class="subscribe-block__input text-input text-input-indicator" type="text" name="email-subscribe"
+                     id="subscribe-form"
                      required>
-              <div class="label-container">
-                <label class="label-as-placeholder" for="subscribe-form">Электронная почта</label>
-              </div>
+              <label class="label-as-placeholder" for="subscribe-form">Электронная почта</label>
+              <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
             </div>
-            <button class="subscribe-block__button button-medium" type="submit">Отправить</button>
           </form>
         </section>
       </article>
       <section class="map-block">
         <h2 class="visually-hidden">Схема проезда и адрес магазина.</h2>
         <iframe class="map-interactive"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6000760813474!2d30.32536854100332!3d59.938778058850936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503953201293"
-          width="1200" height="430" allowfullscreen></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6000760813474!2d30.32536854100332!3d59.938778058850936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1503953201293"
+                width="1200" height="430" allowfullscreen></iframe>
         <div class="address-block">
           <p class="address-block__about address-block__text_short">Адрес главного офиса и офлайн магазина:</p>
           <p class="address-block__text address-block__text_address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -330,23 +326,17 @@
     <h3 class="modal-title">Мы обязательно вам ответим!</h3>
     <button class="modal-feedback__close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
     <form class="modal-feedback__feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <div>
+      <div class="label-container">
         <input class="text-input-indicator" type="text" name="feedback-name" id="feedback-name">
-        <div class="label-container">
           <label class="label-as-placeholder modal__label_name" for="feedback-name">Как вас зовут?</label>
-        </div>
       </div>
-      <div>
+      <div class="label-container">
         <input class="text-input-indicator" type="email" name="feedback-email" id="feedback-email">
-        <div class="label-container">
           <label class="label-as-placeholder modal__label_mail" for="feedback-email">Ваша почта для ответа?</label>
-        </div>
       </div>
-      <div>
+      <div class="label-container">
         <textarea class="textarea-input" name="feedback-text" rows="7" cols="30" id="feedback-message"></textarea>
-        <div class="label-container">
           <label class="textarea-placeholder" for="feedback-message">Напишите что-нибудь...</label>
-        </div>
       </div>
       <button class="button-medium modal-feedback__send-button" type="submit">Отправить</button>
     </form>
