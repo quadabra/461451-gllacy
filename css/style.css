@@ -506,7 +506,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-preferred-size: 560px;
   flex-basis: 560px;
   border-radius: 15px;
-  min-height: 230px;
+  min-height: 229px;
 }
 
 .item-list {
@@ -735,7 +735,7 @@ input[type="radio"].visually-hidden {
   height: 305px;
   background-color: #fff;
   border-radius: 15px;
-  padding: 31px 25px 27px;
+  padding: 30px 25px 29px;
 }
 
 .address-block__about {
@@ -774,7 +774,7 @@ input[type="radio"].visually-hidden {
 
 .social-block__button svg {
   border-radius: 50%;
-  -ms-transform: translate(0.03em, 0.02em);
+  -ms-transform: translateX(0.03em);
   -moz-transform: translateX(0.01em);
   margin: 0;
   padding: 0;
@@ -1738,7 +1738,7 @@ input[type="radio"].visually-hidden {
 }
 
 .item-list {
-  margin-top: 39px;
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1791,7 +1791,7 @@ input[type="radio"].visually-hidden {
 }
 
 .map-block {
-  margin-top: 39px;
+  margin-top: 40px;
   position: relative;
 }
 
@@ -1821,16 +1821,13 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.index-page .footer-container {
-  border-color: transparent;
-}
 
 .social-block {
   margin: 0;
   padding: 0;
+  margin-top: 1px;
   list-style: none;
   min-width: 185px;
   display: -webkit-box;
@@ -1873,7 +1870,7 @@ input[type="radio"].visually-hidden {
 }
 
 .copyright-block img {
-  margin-top: 17px;
+  margin-top: 18px;
   margin-left: 2px;
   margin-bottom: 0;
 }
@@ -1939,14 +1936,17 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination {
-  margin: 43px auto 30px;
+  margin: 43px auto 0;
+  height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  align-items: flex-start;
   list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /********************************** Инпуты *****************************/
