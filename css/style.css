@@ -429,7 +429,7 @@ input[type="radio"].visually-hidden {
   background-color: rgb(248, 247, 244);
 }
 
-.slider-block__special-offer_text {
+.slider-block__special-offer-text {
   margin: 315px auto 0; /** костыль для IE */
   font-size: 60px;
   font-weight: bold;
@@ -1447,7 +1447,7 @@ input[type="radio"].visually-hidden {
 }
 
 /******************************* КНОПКИ ***************************/
-.slider-block__special-offer_button {
+.slider-block__special-offer-button {
   margin: 30px auto 1px;
   display: block;
   -webkit-box-sizing: border-box;
@@ -1469,8 +1469,8 @@ input[type="radio"].visually-hidden {
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.slider-block__special-offer_button:hover,
-.slider-block__special-offer_button:focus {
+.slider-block__special-offer-button:hover,
+.slider-block__special-offer-button:focus {
 
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ec6e5d), to(#f58669));
 
@@ -1483,7 +1483,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 2px 2px #ac1000;
 }
 
-.slider-block__special-offer_button:active {
+.slider-block__special-offer-button:active {
   -webkit-box-shadow: inset 0 2px 2px #942718;
   box-shadow: inset 0 2px 2px #942718;
   background-color: rgba(0, 0, 0, 0.07);
