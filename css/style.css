@@ -1670,13 +1670,15 @@ input[type="radio"].visually-hidden {
 .catalog-search__button:hover {
   background-color: #fbfcfb;
   color: #323232;
+  border: none;
 }
 
 .catalog-search__button:active {
-  background-color: rgb(227, 228, 228);
-  -webkit-box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.8);
-  box-shadow: inset 0 2px 1px 0 rgba(105, 105, 105, 0.8);
+  background-color: rgb(234, 234, 234); /****  Кому верить пипетке или экспорт css???  ***/
+  -webkit-box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
+  box-shadow: inset 0 2px 1px rgba(105, 105, 105, 1);
   color: #323232;
+  border: none;
 }
 
 /************************************ СЕТКА 1 страница *********************************/
